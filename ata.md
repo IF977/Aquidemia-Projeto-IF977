@@ -1,4 +1,4 @@
-## Ata de reunião da iteração 0
+## Ata de reunião da iteração 0 
 
 
 # Participantes
