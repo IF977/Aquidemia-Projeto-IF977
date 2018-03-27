@@ -13,3 +13,4 @@ O projeto tem como objetivo facilitar o acesso das pessoas às academias da cida
 
 # Justificativa do projeto:
 Atualmente as pessoas precisam da prática de exercícios físicos para a manutenção da saúde, porém, a falta de informações muitas vezes cria um empecilho para tais práticas. É aí que entra o Aquidemia! O aplicativo será um facilitador para que as pessoas obtenham informações e se motivem a ir cuidar de sua saúde, usufruindo dos benefícios do serviço das Academias da Cidade. 
+ 
