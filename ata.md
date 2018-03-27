@@ -24,3 +24,4 @@
 * Treinamento em Ruby on Rails (Equipe)
 * Configuração do repositório GitHub (Equipe)
 * Restante a ser definido com cautela posteriormente (Equipe)
+
