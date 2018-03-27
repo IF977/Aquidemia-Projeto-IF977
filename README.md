@@ -3,10 +3,10 @@
 Projeto da disciplina IF977 - Engenharia de Software, do curso de Sistemas de Informação - CIN (UFPE)
 
 # Equipe:
-Tiago Oliveira de Souza (Líder)
-Gabriel Mac’Hamilton Renaux Alves (Colaborador)
-Thomas Torreão Brito (Colaborador)
-Antônio Rodrigues da Mata Neto (Colaborador)
+Tiago Oliveira de Souza (Líder)  
+Gabriel Mac’Hamilton Renaux Alves (Colaborador)  
+Thomas Torreão Brito (Colaborador)  
+Antônio Rodrigues da Mata Neto (Colaborador)  
 
 # Descrição
 O projeto tem como objetivo facilitar o acesso das pessoas às academias da cidade, disponibilizando a academia mais próxima do usuário, os horários das aulas, telefone para contato, entre outras informações pertinentes ao estabelecimento.
