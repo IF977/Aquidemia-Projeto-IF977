@@ -5,9 +5,9 @@ Projeto da disciplina IF977 - Engenharia de Software, do curso de Sistemas de In
 Link do app: em breve
 
 ## Equipe:
-* Gabriel Mac’Hamilton Renaux Alves (Gerente do Projeto e Colaborador)
-* Tiago Oliveira de Souza (Colaborador)
+* Tiago Oliveira de Souza (Colaborador e Gerente de Projeto)
 * Antônio Rodrigues da Mata Neto (Colaborador)
+* Gabriel Mac’Hamilton Renaux Alves (Colaborador)
 * Thomás Torreão de Brito Bastos (Colaborador)
 
 ## Descrição
