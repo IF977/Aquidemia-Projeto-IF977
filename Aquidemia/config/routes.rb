@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :gyms
   # index page / root url
   root 'pages#home', as: 'home'
   
