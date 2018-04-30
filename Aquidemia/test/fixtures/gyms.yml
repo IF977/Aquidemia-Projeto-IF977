@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  rpa: 1
+  microregion: MyString
+  cnes: 1
+  name: MyString
+  adress: MyString
+  bairro: MyString
+  phone: MyString
+  latitude: 9.99
+  longitude: 9.99
+  hour: MyString
+  rating: 9.99
+
+two:
+  number: 1
+  rpa: 1
+  microregion: MyString
+  cnes: 1
+  name: MyString
+  adress: MyString
+  bairro: MyString
+  phone: MyString
+  latitude: 9.99
+  longitude: 9.99
+  hour: MyString
+  rating: 9.99

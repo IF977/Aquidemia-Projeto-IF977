@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Aquidemia_development
+  database: IF976
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Aquidemia_test
+  database: IF976
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Aquidemia_production
-  username: Aquidemia
+  database: IF976
+  username: ec2-user
   password: <%= ENV['AQUIDEMIA_DATABASE_PASSWORD'] %>
