@@ -55,3 +55,15 @@ Como um usuário do Aquidemia
 Quero poder logar no aplicativo com minha conta google ou do facebook
 Para o acesso fique mais fácil
 ```
+```
+10ª HU
+Como um usuário do Aquidemia
+Quero uma sidebar no site
+Para poder navegar melhor
+```
+```
+11ª HU
+Como um usuário do Aquidemia
+Quero informações sobre os desenvolvedores
+Para poder enviar feedback
+```
