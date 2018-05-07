@@ -136,3 +136,873 @@ Processing by SessionsController#create as HTML
   Parameters: {"provider"=>"google"}
 Completed 406 Not Acceptable in 19ms (ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 14:48:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 173ms (Views: 165.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 14:48:51 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 14:48:51 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+Completed 406 Not Acceptable in 19ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:05:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 177ms (Views: 169.6ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:05:41 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:05:41 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:05:41.844321"], ["created_at", "2018-05-07 15:05:41.859099"], ["updated_at", "2018-05-07 15:05:41.859099"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:09:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 170ms (Views: 163.2ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:09:45 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:09:45 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:09:45.356393"], ["created_at", "2018-05-07 15:09:45.552366"], ["updated_at", "2018-05-07 15:09:45.552366"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.7ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:09:45 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:09:45.564124"], ["created_at", "2018-05-07 15:09:45.565029"], ["updated_at", "2018-05-07 15:09:45.565029"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:11:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 173ms (Views: 166.7ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:11:30 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:11:30 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:11:30.656777"], ["created_at", "2018-05-07 15:11:30.856521"], ["updated_at", "2018-05-07 15:11:30.856521"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:11:30 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:11:30.868456"], ["created_at", "2018-05-07 15:11:30.869444"], ["updated_at", "2018-05-07 15:11:30.869444"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:26:18 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 171ms (Views: 164.0ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:26:19 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:26:19 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:26:18.890193"], ["created_at", "2018-05-07 15:26:19.087178"], ["updated_at", "2018-05-07 15:26:19.087178"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:26:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:26:19.098879"], ["created_at", "2018-05-07 15:26:19.099753"], ["updated_at", "2018-05-07 15:26:19.099753"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:29:50 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 176ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:29:51 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:29:51 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:29:50.892285"], ["created_at", "2018-05-07 15:29:51.095856"], ["updated_at", "2018-05-07 15:29:51.095856"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 3.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:29:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:29:51.108304"], ["created_at", "2018-05-07 15:29:51.109242"], ["updated_at", "2018-05-07 15:29:51.109242"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:31:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 169ms (Views: 161.7ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:31:41 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:31:41 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:31:41.628129"], ["created_at", "2018-05-07 15:31:41.823495"], ["updated_at", "2018-05-07 15:31:41.823495"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:31:41 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:31:41.834804"], ["created_at", "2018-05-07 15:31:41.835642"], ["updated_at", "2018-05-07 15:31:41.835642"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:44:31 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 164ms (Views: 157.7ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:44:31 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:44:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:44:31.014022"], ["created_at", "2018-05-07 15:44:31.205051"], ["updated_at", "2018-05-07 15:44:31.205051"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:44:31 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:45:15 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 178ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:45:16 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:45:16 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:45:15.879498"], ["created_at", "2018-05-07 15:45:16.083439"], ["updated_at", "2018-05-07 15:45:16.083439"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 3.7ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:45:16 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:45:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 171ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:45:53 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:45:53 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:45:53.769275"], ["created_at", "2018-05-07 15:45:53.965978"], ["updated_at", "2018-05-07 15:45:53.965978"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:45:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:46:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 181ms (Views: 174.6ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:46:53 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:46:53 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:46:53.252173"], ["created_at", "2018-05-07 15:46:53.459483"], ["updated_at", "2018-05-07 15:46:53.459483"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:46:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:47:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 170ms (Views: 162.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:47:19 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:47:19 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:47:19.683176"], ["created_at", "2018-05-07 15:47:19.878957"], ["updated_at", "2018-05-07 15:47:19.878957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:47:19 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-05-07 15:47:19.890564"], ["updated_at", "2018-05-07 15:47:19.890564"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:49:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 162ms (Views: 155.4ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:49:25 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:49:25 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:49:25.701423"], ["created_at", "2018-05-07 15:49:25.901068"], ["updated_at", "2018-05-07 15:49:25.901068"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 28ms (ActiveRecord: 3.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:49:25 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["oauth_expires_at", "2018-05-07 15:49:25.913430"], ["created_at", "2018-05-07 15:49:25.913843"], ["updated_at", "2018-05-07 15:49:25.913843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:49:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 156ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:49:58 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:49:58 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:49:58.793663"], ["created_at", "2018-05-07 15:49:58.981009"], ["updated_at", "2018-05-07 15:49:58.981009"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.7ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:49:58 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["oauth_expires_at", "2018-05-07 15:49:58.992705"], ["created_at", "2018-05-07 15:49:58.993121"], ["updated_at", "2018-05-07 15:49:58.993121"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:51:09 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 157ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:51:09 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:51:09 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:51:09.005889"], ["created_at", "2018-05-07 15:51:09.194310"], ["updated_at", "2018-05-07 15:51:09.194310"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:51:09 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["oauth_expires_at", "2018-05-07 15:51:09.207238"], ["created_at", "2018-05-07 15:51:09.207678"], ["updated_at", "2018-05-07 15:51:09.207678"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:51:20 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 167ms (Views: 160.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 15:51:21 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 15:51:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 15:51:20.980403"], ["created_at", "2018-05-07 15:51:21.174023"], ["updated_at", "2018-05-07 15:51:21.174023"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 15:51:21 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["oauth_expires_at", "2018-05-07 15:51:21.185578"], ["created_at", "2018-05-07 15:51:21.185951"], ["updated_at", "2018-05-07 15:51:21.185951"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:37:40 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 179ms (Views: 172.3ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:37:40 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:37:40 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:37:40.097422"], ["created_at", "2018-05-07 22:37:40.307480"], ["updated_at", "2018-05-07 22:37:40.307480"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 4.6ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:37:40 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["oauth_expires_at", "2018-05-07 22:37:40.320733"], ["created_at", "2018-05-07 22:37:40.321130"], ["updated_at", "2018-05-07 22:37:40.321130"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:42:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 179ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:42:14 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:42:14 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "google"], ["uid", "12345678910"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:42:14.033764"], ["created_at", "2018-05-07 22:42:14.044639"], ["updated_at", "2018-05-07 22:42:14.044639"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:43:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 161ms (Views: 153.9ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:43:24 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:43:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:43:24.712094"], ["created_at", "2018-05-07 22:43:24.727437"], ["updated_at", "2018-05-07 22:43:24.727437"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:43:50 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 183ms (Views: 175.9ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:43:50 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:43:50 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:43:51"], ["created_at", "2018-05-07 22:43:50.607252"], ["updated_at", "2018-05-07 22:43:50.607252"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:44:28 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 170ms (Views: 163.5ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:44:29 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:44:29 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:44:29"], ["created_at", "2018-05-07 22:44:29.119291"], ["updated_at", "2018-05-07 22:44:29.119291"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.2ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:44:29 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:44:29"], ["created_at", "2018-05-07 22:44:29.137473"], ["updated_at", "2018-05-07 22:44:29.137473"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:47:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 179ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:47:24 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:47:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:47:24"], ["created_at", "2018-05-07 22:47:24.251944"], ["updated_at", "2018-05-07 22:47:24.251944"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.2ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:47:24 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:47:24"], ["created_at", "2018-05-07 22:47:24.270255"], ["updated_at", "2018-05-07 22:47:24.270255"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:48:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 174ms (Views: 166.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:48:43 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:48:43 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:48:44"], ["created_at", "2018-05-07 22:48:43.933794"], ["updated_at", "2018-05-07 22:48:43.933794"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:48:43 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:48:44"], ["created_at", "2018-05-07 22:48:43.953030"], ["updated_at", "2018-05-07 22:48:43.953030"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:53:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 173ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 22:53:54 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 22:53:54 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:53:54"], ["created_at", "2018-05-07 22:53:54.469380"], ["updated_at", "2018-05-07 22:53:54.469380"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 22:53:54 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 22:53:54"], ["created_at", "2018-05-07 22:53:54.487972"], ["updated_at", "2018-05-07 22:53:54.487972"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:06:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 172ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:06:51 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:06:51 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:06:52"], ["created_at", "2018-05-07 23:06:51.886499"], ["updated_at", "2018-05-07 23:06:51.886499"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:06:51 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:06:52"], ["created_at", "2018-05-07 23:06:51.900618"], ["updated_at", "2018-05-07 23:06:51.900618"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:08:15 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 177ms (Views: 169.4ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:08:15 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:08:15 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:08:15"], ["created_at", "2018-05-07 23:08:15.335396"], ["updated_at", "2018-05-07 23:08:15.335396"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:08:15 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:08:15"], ["created_at", "2018-05-07 23:08:15.349191"], ["updated_at", "2018-05-07 23:08:15.349191"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:09:49 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 181ms (Views: 168.8ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:09:50 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:09:50 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:09:50"], ["created_at", "2018-05-07 23:09:50.119714"], ["updated_at", "2018-05-07 23:09:50.119714"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 3.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:09:50 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:09:50"], ["created_at", "2018-05-07 23:09:50.132011"], ["updated_at", "2018-05-07 23:09:50.132011"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:10:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 175ms (Views: 168.3ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:10:11 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:10:11 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:10:11"], ["created_at", "2018-05-07 23:10:11.340093"], ["updated_at", "2018-05-07 23:10:11.340093"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:10:11 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:10:11"], ["created_at", "2018-05-07 23:10:11.353635"], ["updated_at", "2018-05-07 23:10:11.353635"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:13:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 170ms (Views: 162.7ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:13:37 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:13:37 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:13:38"], ["created_at", "2018-05-07 23:13:37.929869"], ["updated_at", "2018-05-07 23:13:37.929869"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:13:37 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:13:38"], ["created_at", "2018-05-07 23:13:37.942500"], ["updated_at", "2018-05-07 23:13:37.942500"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:15:12 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 182ms (Views: 175.5ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:15:13 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:15:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:15:13"], ["created_at", "2018-05-07 23:15:13.185237"], ["updated_at", "2018-05-07 23:15:13.185237"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:15:13 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:15:13"], ["created_at", "2018-05-07 23:15:13.197381"], ["updated_at", "2018-05-07 23:15:13.197381"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:15:32 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 176ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+Started GET "/auth/google" for 127.0.0.1 at 2018-05-07 23:15:32 +0000
+Started GET "/auth/google/callback" for 127.0.0.1 at 2018-05-07 23:15:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"provider"=>"google"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:15:32"], ["created_at", "2018-05-07 23:15:32.310625"], ["updated_at", "2018-05-07 23:15:32.310625"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 17ms (ActiveRecord: 4.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-07 23:15:32 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "12345678910"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("provider", "uid", "first_name", "last_name", "email", "token", "refresh_token", "oauth_expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["provider", "google"], ["uid", "12345678910"], ["first_name", "Gabriel"], ["last_name", "MacHamilton"], ["email", "email@detestes.com"], ["token", "abcdefg12345"], ["refresh_token", "12345abcdefg"], ["oauth_expires_at", "2018-05-07 23:15:32"], ["created_at", "2018-05-07 23:15:32.323769"], ["updated_at", "2018-05-07 23:15:32.323769"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

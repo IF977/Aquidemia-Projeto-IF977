@@ -1,2 +1,5 @@
-<h1>Favorites</h1>
-<p>Find me in app/views/pages/favorites.html.erb</p>
+<% if current_user  %>
+  <h3>Favorites</h3>
+<% else %>
+  <h3>Login necessário</h3>
+<% end %>
