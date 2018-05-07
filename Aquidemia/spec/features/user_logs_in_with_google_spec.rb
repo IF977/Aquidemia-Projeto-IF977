@@ -12,9 +12,19 @@ RSpec.feature "user logs in" do
 end
 
 def hash_gen_ominiauth
-  # Generates fake oauth data for login
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+    provider: "google",
+    uid: "12345678910",
+    info: {
+      email: "email@detestes.com",
+      first_name: "Gabriel",
+      last_name: "MacHamilton"
+    },
+    credentials: {
+      token: "abcdefg12345",
+      refresh_token: "12345abcdefg",
+      expires_at: DateTime.now,
+    }
   })
 end
