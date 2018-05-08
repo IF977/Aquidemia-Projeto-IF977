@@ -3,5 +3,5 @@ When("I click on the search button") do
 end
 
 Then("I should see the map") do
-  visit('/pages/search')
+  expect(page).to have_css '#map'
 end
