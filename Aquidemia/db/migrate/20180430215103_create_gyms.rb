@@ -1,7 +1,6 @@
 class CreateGyms < ActiveRecord::Migration[5.1]
   def change
     create_table :gyms do |t|
-      t.integer :number
       t.integer :rpa
       t.string :microregion
       t.integer :cnes
