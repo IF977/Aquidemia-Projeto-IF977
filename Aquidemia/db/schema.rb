@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20180507061354) do
   enable_extension "plpgsql"
 
   create_table "gyms", force: :cascade do |t|
+    t.integer "number"
     t.integer "rpa"
     t.string "microregion"
     t.integer "cnes"

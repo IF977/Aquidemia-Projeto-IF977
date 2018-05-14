@@ -7455,3 +7455,932 @@ Migrating to CreateUsers (20180507061354)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "3"], ["cnes", 6665020], ["name", "US 370 ACADEMIA DA CIDADE POLO PRACA DA VITORIA"], ["adress", "PRACA DO IBURA, UR 01"], ["bairro", "IBURA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.118207097"], ["longitude", "-34.94611665"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-13 19:35:17.504562"], ["updated_at", "2018-05-13 19:35:17.504562"]]
   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:10:50 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:10:53 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:12:04 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:12:07 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:12:33 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:12:36 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3091087785219582750)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180507061354)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying, "uid" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "token" character varying, "refresh_token" character varying, "oauth_expires_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180507061354"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3091087785219582750)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:13:21 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 203ms (Views: 196.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:13:26 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 179.171.115.154 at 2018-05-13 21:13:26 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 179.171.115.154 at 2018-05-13 21:13:27 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 179.171.115.154 at 2018-05-13 21:13:28 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 179.171.115.154 at 2018-05-13 21:13:29 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 179.171.115.154 at 2018-05-13 21:13:31 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 179.171.115.154 at 2018-05-13 21:13:33 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:13:34 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 21:13:36 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 21:13:37 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/" for 179.171.115.154 at 2018-05-13 21:36:40 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:50:44 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:51:06 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:51:09 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:51:17 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 188ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:51:29 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:52:16 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 22:57:45 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 204ms (Views: 195.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 22:58:00 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 22:58:02 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:06:16 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (180.3ms)
+Completed 200 OK in 197ms (Views: 190.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:06:28 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:07:20 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 179.171.115.154 at 2018-05-13 23:07:54 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:07:57 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 23:07:58 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/google" for 179.171.115.154 at 2018-05-13 23:07:59 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:11:23 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:12:23 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:18:05 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.115.154 at 2018-05-13 23:20:08 +0000
+Cannot render console from 179.171.115.154! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-13 23:44:33 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-13 23:57:25 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-13 23:59:35 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 999999], ["name", "POLO ESEF"], ["adress", "AV GOVERNADOR AGAMENON MAGALHAES, S/N - SANTO AMARO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045586"], ["longitude", "-34.886363"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.754824"], ["updated_at", "2018-05-14 00:02:06.754824"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6664288], ["name", "US 358 ACADEMIA DA CIDADE POLO DE SANTO AMARO /JOAO DE BARROS"], ["adress", "AV AGAMENON MAGALHAES, S/N"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.044385959"], ["longitude", "-34.88799104"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.758755"], ["updated_at", "2018-05-14 00:02:06.758755"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6865003], ["name", "US 374 ACADEMIA DA CIDADE POLO 13 DE MAIO"], ["adress", "PRACA 13 DE MAIO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.056658194"], ["longitude", "-34.88019835"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.761007"], ["updated_at", "2018-05-14 00:02:06.761007"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664253], ["name", "US 356 ACADEMIA DA CIDADE POLO DA ILHA DO LEITE / MIGUEL DE CERVANTES"], ["adress", "PRACA MIGUEL DE CERVANTES"], ["bairro", "ILHA DO LEITE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.066801476"], ["longitude", "-34.89355356"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.763110"], ["updated_at", "2018-05-14 00:02:06.763110"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664261], ["name", "US 357 ACADEMIA DA CIDADE POLO COQUE"], ["adress", "AV MARTINS LUTHER KING, S/N"], ["bairro", "JOANA BEZERRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.069517287"], ["longitude", "-34.897017"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.765193"], ["updated_at", "2018-05-14 00:02:06.765193"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA CHAO DE ESTRELAS"], ["adress", "RUA MARCILIO DIAS"], ["bairro", "CAMPINA DO BARRETO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.020622601"], ["longitude", "-34.87968359"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.767241"], ["updated_at", "2018-05-14 00:02:06.767241"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA JOVEM CAP"], ["adress", "RUA SUDESTE, S/N"], ["bairro", "CAJUEIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.014352817"], ["longitude", "-34.88325204"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.769356"], ["updated_at", "2018-05-14 00:02:06.769356"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6660398], ["name", "US 353 ACADEMIA DA CIDADE POLO ILHA DE JOANEIRO"], ["adress", "AV AGAMENON MAGALHAES "], ["bairro", "TORREAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041390408"], ["longitude", "-34.88334059"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.771393"], ["updated_at", "2018-05-14 00:02:06.771393"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6664245], ["name", "US 355 ACADEMIA DA CIDADE POLO HIPODROMO"], ["adress", "PRACA DO HIPODROMO"], ["bairro", "HIPODROMO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.032222022"], ["longitude", "-34.8860192"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.773477"], ["updated_at", "2018-05-14 00:02:06.773477"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6916317], ["name", "US 377 ACADEMIA DA CIDADE POLO CHIE"], ["adress", "AV AGAMENON MAGALHAES"], ["bairro", "CAMPO GRANDE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.038132873"], ["longitude", "-34.87638771"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.775564"], ["updated_at", "2018-05-14 00:02:06.775564"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 9999999], ["name", "POLO CSU AFRANIO GODOY"], ["adress", "AV ANIBAL BENEVOLO, S/N"], ["bairro", "LINHA DO TIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010283367"], ["longitude", "-34.90327754"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.777635"], ["updated_at", "2018-05-14 00:02:06.777635"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 6664237], ["name", "US 354 ACADEMIA DA CIDADE POLO ALTO DO CAPITAO"], ["adress", "RUA TUPIRACABA, S/N"], ["bairro", "DOIS UNIDOS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-7.999643463"], ["longitude", "-34.91377457"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.779717"], ["updated_at", "2018-05-14 00:02:06.779717"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO ERMIRIO DE MORAES"], ["adress", "AV 17 DE AGOSTO, 2388"], ["bairro", "CASA FORTE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028673668"], ["longitude", "-34.9258694"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.781843"], ["updated_at", "2018-05-14 00:02:06.781843"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PARQUE SANTANA"], ["adress", "RUA SANTANA, S/N - SANTANA"], ["bairro", "SANTANA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041942302"], ["longitude", "-34.91801276"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.783904"], ["updated_at", "2018-05-14 00:02:06.783904"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664296], ["name", "US 359 ACADEMIA DA CIDADE POLO SITIO DA TRINDADE"], ["adress", "ESTRADA DO ARRAIAL, S/N"], ["bairro", "CASA AMARELA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028879688"], ["longitude", "-34.91217231"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.785996"], ["updated_at", "2018-05-14 00:02:06.785996"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664318], ["name", "US 360 ACADEMIA DA CIDADE POLO DO MORRO DA CONCEICAO / ODETE GOMES DE ALMEIDA"], ["adress", "PRACA DO MORRO DA CONCEICAO, 589"], ["bairro", "MORRO DA CONCEICAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.019378056"], ["longitude", "-34.91499809"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.788144"], ["updated_at", "2018-05-14 00:02:06.788144"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664326], ["name", "US 361 ACADEMIA DA CIDADE POLO JAQUEIRA"], ["adress", "RUA DO FUTURO, S/N"], ["bairro", "JAQUEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.036524412"], ["longitude", "-34.90469063"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.790248"], ["updated_at", "2018-05-14 00:02:06.790248"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "2"], ["cnes", 7135823], ["name", "US 387 ACADEMIA DA CIDADE POLO UM POR TODOS"], ["adress", "RUA VILA UM POR TODOS, S/N"], ["bairro", "VASCO DA GAMA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010439885"], ["longitude", "-34.9224429"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.792332"], ["updated_at", "2018-05-14 00:02:06.792332"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "3"], ["cnes", 9999999], ["name", "US 380 POLO PRACA DO BURITY"], ["adress", "AVENIDA NORTE, S/N"], ["bairro", "MACAXEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.016742672"], ["longitude", "-34.92931483"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.794434"], ["updated_at", "2018-05-14 00:02:06.794434"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6664679], ["name", "US 363 ACADEMIA DA CIDADE POLO BEIRA RIO / TORRE"], ["adress", "AV BEIRA RIO, S/N"], ["bairro", "TORRE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.046118215"], ["longitude", "-34.90401316"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.796478"], ["updated_at", "2018-05-14 00:02:06.796478"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6865054], ["name", "US 375 ACADEMIA DA CIDADE POLO PRACA DO SALGUEIRO"], ["adress", "PRACA DO SALGUEIRO"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.042617606"], ["longitude", "-34.93825496"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.798557"], ["updated_at", "2018-05-14 00:02:06.798557"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 7626118], ["name", "US 398 ACADEMIA DA CIDADE POLO CAVOUCO"], ["adress", "AVENIDA ALVARES PEREIRA DE LIRA - IPUTINGA"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045333"], ["longitude", "-34.93145"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.800644"], ["updated_at", "2018-05-14 00:02:06.800644"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664717], ["name", " US 364 ACADEMIA DA CIDADE POLO DA PRACA DO ENGENHO DO MEIO, PARQUE ARNALDO ASSUNCAO"], ["adress", "PRACA DO ENGENHO DO MEIO "], ["bairro", "ENGENHO DO MEIO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057599618"], ["longitude", "-34.94339901"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.802751"], ["updated_at", "2018-05-14 00:02:06.802751"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664660], ["name", "US 362 ACADEMIA DA CIDADE POLO DA PRACA DA AV DO FORTE / TORROES / ARRAIAL NOVO DO BOM"], ["adress", "PRACA DA AVENIDA DO FORTE"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057458224"], ["longitude", "-34.93121509"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.804807"], ["updated_at", "2018-05-14 00:02:06.804807"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 7135874], ["name", "US 386 ACADEMIA DA CIDADE POLO RODA DE FOGO"], ["adress", "AV PROFESSOR ARTUR COUTINHO, S/N"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.058097415"], ["longitude", "-34.93740353"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.807001"], ["updated_at", "2018-05-14 00:02:06.807001"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 6664741], ["name", "US 365 ACADEMIA DA CIDADE POLO DA VARZEA/PRACA DO POETA"], ["adress", "PRACA DO POETA/VARZEA"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.034308222"], ["longitude", "-34.95074169"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.809146"], ["updated_at", "2018-05-14 00:02:06.809146"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 7018452], ["name", "US 382 ACADEMIA DA CIDADE POLO VARZEA"], ["adress", "RUA CEL PACHECO"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.049217173"], ["longitude", "-34.95946709"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.811319"], ["updated_at", "2018-05-14 00:02:06.811319"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA DO ABC"], ["adress", "AV MANUEL GONCALVES DA LUZA"], ["bairro", "MUSTARDINHA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.073359317"], ["longitude", "-34.9186726"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.813440"], ["updated_at", "2018-05-14 00:02:06.813440"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 6664814], ["name", "US 367 ACADEMIA DA CIDADE POLO DE SAN MARTIN"], ["adress", "PATIO DE EVENTOS NOEL RODRIGUES"], ["bairro", "SAN MARTIN"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.070989066"], ["longitude", "-34.92877891"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.815523"], ["updated_at", "2018-05-14 00:02:06.815523"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 379 POLO PRACA SIMAO BORBA"], ["adress", "RUA SIMAO BORBA, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.098664953"], ["longitude", "-34.9258452"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.817632"], ["updated_at", "2018-05-14 00:02:06.817632"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 381 POLO PRACA HEROIS DA RESTAURACAO"], ["adress", "RUA CAJA"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.097247927"], ["longitude", "-34.93565796"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.819709"], ["updated_at", "2018-05-14 00:02:06.819709"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 383 POLO PRACA DAS LAVADEIRAS"], ["adress", "RUA PALMARES, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.094536677"], ["longitude", "-34.93669277"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.821785"], ["updated_at", "2018-05-14 00:02:06.821785"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 6664806], ["name", "US 366 ACADEMIA DA CIDADE POLO DA PRACA DE JARDIM SAO PAULO"], ["adress", "PRACA DE JARDIM SAO PAULO "], ["bairro", "JARDIM SAO PAULO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.081612226"], ["longitude", "-34.93826531"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.823894"], ["updated_at", "2018-05-14 00:02:06.823894"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 7508557], ["name", "US 396 POLO VILA DOS MILAGRES"], ["adress", "RUA CANTORA DALVA DE OLIVEIRA, S/N - BARRO"], ["bairro", "BARRO"], ["phone", "3355-2820"], ["latitude", "-8.107199"], ["longitude", "-34.9542199"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.826075"], ["updated_at", "2018-05-14 00:02:06.826075"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6664911], ["name", "US 368 ACADEMIA DA CIDADE POLO DA PRAIA DE BOA VIAGEM"], ["adress", "SEGUNDO JARDIM DE BOA VIAGEM"], ["bairro", "BOA VIAGEM"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.101778875"], ["longitude", "-34.8850463"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.828250"], ["updated_at", "2018-05-14 00:02:06.828250"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665012], ["name", "US 369 ACADEMIA DA CIDADE POLO DE BRASILIA TEIMOSA"], ["adress", "RUA JOAO MARQUES DOS SANTOS"], ["bairro", "BRASILIA TEIMOSA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.085577821"], ["longitude", "-34.87843691"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.834322"], ["updated_at", "2018-05-14 00:02:06.834322"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665063], ["name", "US 371 ACADEMIA DA CIDADE POLO IPSEP"], ["adress", "PRACA SENADOR ROBERTO KENEDY"], ["bairro", "IPSEP"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.116100104"], ["longitude", "-34.9190577"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.836487"], ["updated_at", "2018-05-14 00:02:06.836487"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665071], ["name", "US 372 ACADEMIA DA CIDADE POLO LAGOA DO ARACA"], ["adress", "AV JOSE F LINS, LAGOA DO ARACA"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.0966176"], ["longitude", "-34.9152387"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.838570"], ["updated_at", "2018-05-14 00:02:06.838570"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 7018525], ["name", "US 384 POLO PRACA CAFESOPOLIS"], ["adress", "RUA CAFESOPOLIS, S/N"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1014676"], ["longitude", "-34.90869305"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.840677"], ["updated_at", "2018-05-14 00:02:06.840677"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "2"], ["cnes", 7057466], ["name", "USF 385 POLO PRACA JORDAO"], ["adress", "AV ALBERTO LUNDGREN, S/N"], ["bairro", "JORDAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1366891"], ["longitude", "-34.93687444"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.842728"], ["updated_at", "2018-05-14 00:02:06.842728"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "3"], ["cnes", 6665020], ["name", "US 370 ACADEMIA DA CIDADE POLO PRACA DA VITORIA"], ["adress", "PRACA DO IBURA, UR 01"], ["bairro", "IBURA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.118207097"], ["longitude", "-34.94611665"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-14 00:02:06.844741"], ["updated_at", "2018-05-14 00:02:06.844741"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:17:10 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 193ms (Views: 185.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:24:51 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:25:07 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:25:14 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:29:56 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:37:53 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 00:39:13 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 01:09:52 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 01:19:11 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 01:58:07 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:08:50 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:16:21 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:18:02 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:26:17 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:29:44 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:30:39 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:32:32 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:37:49 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:45:38 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:46:44 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:47:36 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 189ms (Views: 182.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 179.171.20.209 at 2018-05-14 02:47:43 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 179.171.20.209 at 2018-05-14 02:47:44 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 02:59:06 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 179.171.20.209 at 2018-05-14 03:18:57 +0000
+Cannot render console from 179.171.20.209! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
