@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Academias</th>
+    <th>Notas</th>
+  </tr>
+  <%= Gym.each do |gym| %>
+    <tr>
+      <td><%= gym.name%></td>    
+      <td><%= gym.rating%></td>
+    </tr>
+  <% end %>
+</table>

@@ -4,12 +4,13 @@ class GymsController < ApplicationController
   # GET /gyms
   # GET /gyms.json
   def index
-    @gyms = Gym.all
+    @gyms = Gym.find()
   end
 
   # GET /gyms/1
   # GET /gyms/1.json
   def show
+    @gyms = Gym.all
   end
 
   # GET /gyms/new
