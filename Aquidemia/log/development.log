@@ -10515,3 +10515,379 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:27:18 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 199ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/%3Ca%20href=" for 186.212.155.211 at 2018-05-15 00:27:21 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/%3Ca%20href="):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:27:46 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:27:51 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>Academias</th>
+    11:     <th>Notas</th>
+    12:   </tr>
+    13:   <% @gyms.each do |gym| %>
+    14:     <tr>
+    15:       <td><%= gym.name%></td>    
+    16:       <td><%= gym.rating%></td>
+  
+app/views/pages/ratings.html.erb:13:in `_app_views_pages_ratings_html_erb___3368122232503216605_70306818071120'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 999999], ["name", "POLO ESEF"], ["adress", "AV GOVERNADOR AGAMENON MAGALHAES, S/N - SANTO AMARO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045586"], ["longitude", "-34.886363"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.202061"], ["updated_at", "2018-05-15 00:32:11.202061"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6664288], ["name", "US 358 ACADEMIA DA CIDADE POLO DE SANTO AMARO /JOAO DE BARROS"], ["adress", "AV AGAMENON MAGALHAES, S/N"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.044385959"], ["longitude", "-34.88799104"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.208201"], ["updated_at", "2018-05-15 00:32:11.208201"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6865003], ["name", "US 374 ACADEMIA DA CIDADE POLO 13 DE MAIO"], ["adress", "PRACA 13 DE MAIO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.056658194"], ["longitude", "-34.88019835"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.210386"], ["updated_at", "2018-05-15 00:32:11.210386"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664253], ["name", "US 356 ACADEMIA DA CIDADE POLO DA ILHA DO LEITE / MIGUEL DE CERVANTES"], ["adress", "PRACA MIGUEL DE CERVANTES"], ["bairro", "ILHA DO LEITE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.066801476"], ["longitude", "-34.89355356"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.212632"], ["updated_at", "2018-05-15 00:32:11.212632"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664261], ["name", "US 357 ACADEMIA DA CIDADE POLO COQUE"], ["adress", "AV MARTINS LUTHER KING, S/N"], ["bairro", "JOANA BEZERRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.069517287"], ["longitude", "-34.897017"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.214855"], ["updated_at", "2018-05-15 00:32:11.214855"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA CHAO DE ESTRELAS"], ["adress", "RUA MARCILIO DIAS"], ["bairro", "CAMPINA DO BARRETO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.020622601"], ["longitude", "-34.87968359"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.217146"], ["updated_at", "2018-05-15 00:32:11.217146"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA JOVEM CAP"], ["adress", "RUA SUDESTE, S/N"], ["bairro", "CAJUEIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.014352817"], ["longitude", "-34.88325204"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.219466"], ["updated_at", "2018-05-15 00:32:11.219466"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6660398], ["name", "US 353 ACADEMIA DA CIDADE POLO ILHA DE JOANEIRO"], ["adress", "AV AGAMENON MAGALHAES "], ["bairro", "TORREAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041390408"], ["longitude", "-34.88334059"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.221635"], ["updated_at", "2018-05-15 00:32:11.221635"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6664245], ["name", "US 355 ACADEMIA DA CIDADE POLO HIPODROMO"], ["adress", "PRACA DO HIPODROMO"], ["bairro", "HIPODROMO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.032222022"], ["longitude", "-34.8860192"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.223802"], ["updated_at", "2018-05-15 00:32:11.223802"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6916317], ["name", "US 377 ACADEMIA DA CIDADE POLO CHIE"], ["adress", "AV AGAMENON MAGALHAES"], ["bairro", "CAMPO GRANDE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.038132873"], ["longitude", "-34.87638771"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.225999"], ["updated_at", "2018-05-15 00:32:11.225999"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 9999999], ["name", "POLO CSU AFRANIO GODOY"], ["adress", "AV ANIBAL BENEVOLO, S/N"], ["bairro", "LINHA DO TIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010283367"], ["longitude", "-34.90327754"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.228204"], ["updated_at", "2018-05-15 00:32:11.228204"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 6664237], ["name", "US 354 ACADEMIA DA CIDADE POLO ALTO DO CAPITAO"], ["adress", "RUA TUPIRACABA, S/N"], ["bairro", "DOIS UNIDOS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-7.999643463"], ["longitude", "-34.91377457"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.230459"], ["updated_at", "2018-05-15 00:32:11.230459"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO ERMIRIO DE MORAES"], ["adress", "AV 17 DE AGOSTO, 2388"], ["bairro", "CASA FORTE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028673668"], ["longitude", "-34.9258694"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.232672"], ["updated_at", "2018-05-15 00:32:11.232672"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PARQUE SANTANA"], ["adress", "RUA SANTANA, S/N - SANTANA"], ["bairro", "SANTANA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041942302"], ["longitude", "-34.91801276"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.234877"], ["updated_at", "2018-05-15 00:32:11.234877"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664296], ["name", "US 359 ACADEMIA DA CIDADE POLO SITIO DA TRINDADE"], ["adress", "ESTRADA DO ARRAIAL, S/N"], ["bairro", "CASA AMARELA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028879688"], ["longitude", "-34.91217231"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.237117"], ["updated_at", "2018-05-15 00:32:11.237117"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664318], ["name", "US 360 ACADEMIA DA CIDADE POLO DO MORRO DA CONCEICAO / ODETE GOMES DE ALMEIDA"], ["adress", "PRACA DO MORRO DA CONCEICAO, 589"], ["bairro", "MORRO DA CONCEICAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.019378056"], ["longitude", "-34.91499809"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.239337"], ["updated_at", "2018-05-15 00:32:11.239337"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664326], ["name", "US 361 ACADEMIA DA CIDADE POLO JAQUEIRA"], ["adress", "RUA DO FUTURO, S/N"], ["bairro", "JAQUEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.036524412"], ["longitude", "-34.90469063"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.241522"], ["updated_at", "2018-05-15 00:32:11.241522"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "2"], ["cnes", 7135823], ["name", "US 387 ACADEMIA DA CIDADE POLO UM POR TODOS"], ["adress", "RUA VILA UM POR TODOS, S/N"], ["bairro", "VASCO DA GAMA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010439885"], ["longitude", "-34.9224429"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.243745"], ["updated_at", "2018-05-15 00:32:11.243745"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "3"], ["cnes", 9999999], ["name", "US 380 POLO PRACA DO BURITY"], ["adress", "AVENIDA NORTE, S/N"], ["bairro", "MACAXEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.016742672"], ["longitude", "-34.92931483"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.245874"], ["updated_at", "2018-05-15 00:32:11.245874"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6664679], ["name", "US 363 ACADEMIA DA CIDADE POLO BEIRA RIO / TORRE"], ["adress", "AV BEIRA RIO, S/N"], ["bairro", "TORRE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.046118215"], ["longitude", "-34.90401316"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.248049"], ["updated_at", "2018-05-15 00:32:11.248049"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6865054], ["name", "US 375 ACADEMIA DA CIDADE POLO PRACA DO SALGUEIRO"], ["adress", "PRACA DO SALGUEIRO"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.042617606"], ["longitude", "-34.93825496"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.250231"], ["updated_at", "2018-05-15 00:32:11.250231"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 7626118], ["name", "US 398 ACADEMIA DA CIDADE POLO CAVOUCO"], ["adress", "AVENIDA ALVARES PEREIRA DE LIRA - IPUTINGA"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045333"], ["longitude", "-34.93145"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.252454"], ["updated_at", "2018-05-15 00:32:11.252454"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664717], ["name", " US 364 ACADEMIA DA CIDADE POLO DA PRACA DO ENGENHO DO MEIO, PARQUE ARNALDO ASSUNCAO"], ["adress", "PRACA DO ENGENHO DO MEIO "], ["bairro", "ENGENHO DO MEIO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057599618"], ["longitude", "-34.94339901"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.254662"], ["updated_at", "2018-05-15 00:32:11.254662"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664660], ["name", "US 362 ACADEMIA DA CIDADE POLO DA PRACA DA AV DO FORTE / TORROES / ARRAIAL NOVO DO BOM"], ["adress", "PRACA DA AVENIDA DO FORTE"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057458224"], ["longitude", "-34.93121509"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.256813"], ["updated_at", "2018-05-15 00:32:11.256813"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 7135874], ["name", "US 386 ACADEMIA DA CIDADE POLO RODA DE FOGO"], ["adress", "AV PROFESSOR ARTUR COUTINHO, S/N"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.058097415"], ["longitude", "-34.93740353"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.258994"], ["updated_at", "2018-05-15 00:32:11.258994"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 6664741], ["name", "US 365 ACADEMIA DA CIDADE POLO DA VARZEA/PRACA DO POETA"], ["adress", "PRACA DO POETA/VARZEA"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.034308222"], ["longitude", "-34.95074169"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.261206"], ["updated_at", "2018-05-15 00:32:11.261206"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 7018452], ["name", "US 382 ACADEMIA DA CIDADE POLO VARZEA"], ["adress", "RUA CEL PACHECO"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.049217173"], ["longitude", "-34.95946709"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.263472"], ["updated_at", "2018-05-15 00:32:11.263472"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA DO ABC"], ["adress", "AV MANUEL GONCALVES DA LUZA"], ["bairro", "MUSTARDINHA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.073359317"], ["longitude", "-34.9186726"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.265687"], ["updated_at", "2018-05-15 00:32:11.265687"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 6664814], ["name", "US 367 ACADEMIA DA CIDADE POLO DE SAN MARTIN"], ["adress", "PATIO DE EVENTOS NOEL RODRIGUES"], ["bairro", "SAN MARTIN"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.070989066"], ["longitude", "-34.92877891"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.267896"], ["updated_at", "2018-05-15 00:32:11.267896"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 379 POLO PRACA SIMAO BORBA"], ["adress", "RUA SIMAO BORBA, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.098664953"], ["longitude", "-34.9258452"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.270094"], ["updated_at", "2018-05-15 00:32:11.270094"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 381 POLO PRACA HEROIS DA RESTAURACAO"], ["adress", "RUA CAJA"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.097247927"], ["longitude", "-34.93565796"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.272845"], ["updated_at", "2018-05-15 00:32:11.272845"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 383 POLO PRACA DAS LAVADEIRAS"], ["adress", "RUA PALMARES, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.094536677"], ["longitude", "-34.93669277"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.275023"], ["updated_at", "2018-05-15 00:32:11.275023"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 6664806], ["name", "US 366 ACADEMIA DA CIDADE POLO DA PRACA DE JARDIM SAO PAULO"], ["adress", "PRACA DE JARDIM SAO PAULO "], ["bairro", "JARDIM SAO PAULO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.081612226"], ["longitude", "-34.93826531"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.277301"], ["updated_at", "2018-05-15 00:32:11.277301"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 7508557], ["name", "US 396 POLO VILA DOS MILAGRES"], ["adress", "RUA CANTORA DALVA DE OLIVEIRA, S/N - BARRO"], ["bairro", "BARRO"], ["phone", "3355-2820"], ["latitude", "-8.107199"], ["longitude", "-34.9542199"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.279540"], ["updated_at", "2018-05-15 00:32:11.279540"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6664911], ["name", "US 368 ACADEMIA DA CIDADE POLO DA PRAIA DE BOA VIAGEM"], ["adress", "SEGUNDO JARDIM DE BOA VIAGEM"], ["bairro", "BOA VIAGEM"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.101778875"], ["longitude", "-34.8850463"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.281766"], ["updated_at", "2018-05-15 00:32:11.281766"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665012], ["name", "US 369 ACADEMIA DA CIDADE POLO DE BRASILIA TEIMOSA"], ["adress", "RUA JOAO MARQUES DOS SANTOS"], ["bairro", "BRASILIA TEIMOSA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.085577821"], ["longitude", "-34.87843691"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.284014"], ["updated_at", "2018-05-15 00:32:11.284014"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665063], ["name", "US 371 ACADEMIA DA CIDADE POLO IPSEP"], ["adress", "PRACA SENADOR ROBERTO KENEDY"], ["bairro", "IPSEP"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.116100104"], ["longitude", "-34.9190577"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.286273"], ["updated_at", "2018-05-15 00:32:11.286273"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665071], ["name", "US 372 ACADEMIA DA CIDADE POLO LAGOA DO ARACA"], ["adress", "AV JOSE F LINS, LAGOA DO ARACA"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.0966176"], ["longitude", "-34.9152387"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.288629"], ["updated_at", "2018-05-15 00:32:11.288629"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 7018525], ["name", "US 384 POLO PRACA CAFESOPOLIS"], ["adress", "RUA CAFESOPOLIS, S/N"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1014676"], ["longitude", "-34.90869305"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.290897"], ["updated_at", "2018-05-15 00:32:11.290897"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "2"], ["cnes", 7057466], ["name", "USF 385 POLO PRACA JORDAO"], ["adress", "AV ALBERTO LUNDGREN, S/N"], ["bairro", "JORDAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1366891"], ["longitude", "-34.93687444"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.293183"], ["updated_at", "2018-05-15 00:32:11.293183"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "3"], ["cnes", 6665020], ["name", "US 370 ACADEMIA DA CIDADE POLO PRACA DA VITORIA"], ["adress", "PRACA DO IBURA, UR 01"], ["bairro", "IBURA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.118207097"], ["longitude", "-34.94611665"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "7.0"], ["created_at", "2018-05-15 00:32:11.295396"], ["updated_at", "2018-05-15 00:32:11.295396"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:32:22 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 199ms (Views: 191.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:32:25 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>Academias</th>
+    11:     <th>Notas</th>
+    12:   </tr>
+    13:   <% @gyms.each do |gym| %>
+    14:     <tr>
+    15:       <td><%= gym.name%></td>    
+    16:       <td><%= gym.rating%></td>
+  
+app/views/pages/ratings.html.erb:13:in `_app_views_pages_ratings_html_erb__1076535270017069200_69850059835100'
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:34:40 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>Academias</th>
+    11:     <th>Notas</th>
+    12:   </tr>
+    13:   <% @gyms.each do |gym| %>
+    14:     <tr>
+    15:       <td><%= gym.name%></td>    
+    16:       <td><%= gym.rating%></td>
+  
+app/views/pages/ratings.html.erb:13:in `_app_views_pages_ratings_html_erb__1076535270017069200_69850101601700'
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:34:42 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:34:43 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:34:48 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>Academias</th>
+    11:     <th>Notas</th>
+    12:   </tr>
+    13:   <% @gyms.each do |gym| %>
+    14:     <tr>
+    15:       <td><%= gym.name%></td>    
+    16:       <td><%= gym.rating%></td>
+  
+app/views/pages/ratings.html.erb:13:in `_app_views_pages_ratings_html_erb__1076535270017069200_69849925975060'
+Started GET "/pages/hour" for 186.212.155.211 at 2018-05-15 00:34:50 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#hour as HTML
+  Rendering pages/hour.html.erb within layouts/application
+  Rendered pages/hour.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/hour" for 186.212.155.211 at 2018-05-15 00:36:48 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#hour as HTML
+  Rendering pages/hour.html.erb within layouts/application
+  Rendered pages/hour.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:     <th>Academias</th>
+    11:     <th>Horários</th>
+    12:   </tr>
+    13:   <% @gyms.each do |gym| %>
+    14:     <tr>
+    15:       <td><%= gym.name%></td>    
+    16:       <td><%= gym.hour%></td>
+  
+app/views/pages/hour.html.erb:13:in `_app_views_pages_hour_html_erb___2320341321900088105_69850103946340'
+Started GET "/" for 186.212.155.211 at 2018-05-15 00:36:55 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:36:57 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:37:17 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:37:36 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:38:02 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:40:05 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/hour" for 186.212.155.211 at 2018-05-15 00:40:09 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#hour as HTML
+  Rendering pages/hour.html.erb within layouts/application
+  Rendered pages/hour.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:     <th>Academias</th>
+    15:     <th>Horários</th>
+    16:   </tr>
+    17:   <% @gyms.each do |gym| %>
+    18:     <tr>
+    19:       <td><%= gym.name%></td>    
+    20:       <td><%= gym.hour%></td>
+  
+app/views/pages/hour.html.erb:17:in `_app_views_pages_hour_html_erb___2320341321900088105_42171940'
+Started GET "/pages/ratings" for 186.212.155.211 at 2018-05-15 00:40:48 +0000
+Cannot render console from 186.212.155.211! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
