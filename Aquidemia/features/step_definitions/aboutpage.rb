@@ -3,7 +3,7 @@ Given("I am on the home page") do
 end
 
 When("I click on the about button") do
-  click_link("About")
+  click_link("Sobre")
 end
 
 Then("I should see the information on a new page") do
