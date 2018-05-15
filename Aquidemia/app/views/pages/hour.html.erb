@@ -4,16 +4,16 @@
 </head>
 <body>
 
-<h2>Notas das academias da cidade</h2>
+<h2>Horarios das academias da cidade</h2>
 <table style="width:60%">
   <tr>
     <th>Academias</th>
-    <th>Notas</th>
+    <th>Horarios</th>
   </tr>
   <% @gyms.each do |gym| %>
     <tr>
       <td><%= gym.name%></td>    
-      <td><%= gym.rating%></td>
+      <td><%= gym.hour%></td>
     </tr>
   <% end %>
 </table>

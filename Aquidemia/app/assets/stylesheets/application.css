@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+body {
+    margin: 0px !important;
+    height: 100%;
+    background-image: url("https://media.discordapp.net/attachments/423272905783377933/445727684551507978/Design_sem_nome.png?width=325&height=325");
+    background-size: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color: #f1f1c1;
+}
+
+tbody {
+    background-color: beige;
+}
+
+.jumbotron {
+    -webkit-box-shadow: 0px 4px 21px -2px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 4px 21px -2px rgba(0,0,0,0.64);
+    box-shadow: 0px 4px 21px -2px rgba(0,0,0,0.64);  
+}
