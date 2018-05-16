@@ -50,7 +50,21 @@ Atividade | Responsável
 |Desenvolvimento front-end de visualização do google login (Views)  |Gabriel
 |Criação de testes do mapa |Antônio
 |Criação de testes do login do google |Antônio
+|Desenvolvimento front-end de visualização de notas das academias (Views) 	|Gabriel
+|Desenvolvimento front-end de visualização de horários das academias (Views)|Gabriel
 
+```
+2ª HU
+Como um usuário do Aquidemia
+Quero ver as notas das academias
+Para descobrir qual a melhor
+```
+```
+7ª HU
+Como um usuário do Aquidemia
+Quero saber os horários de aulas da academia
+Para saber de que horas devo ir para a academia se quiser aulas
+```
 ```
 9ª HU
 Como um usuário do Aquidemia
@@ -61,8 +75,6 @@ Para o acesso fique mais fácil
 ### Não foi feito
 Atividade | Responsável
 --- | ---
-|Desenvolvimento front-end de visualização de notas das academias (Views) 	|Gabriel
-|Desenvolvimento front-end de visualização de horários das academias (Views)|Gabriel
 |Criação de testes da página de rating das academias |Antônio
 |Criação de testes da página de horários das academias |Antônio
 
