@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
 <div class="container">
       <div class="jumbotron">
         <p class="lead">
-        <h2>Horários das aulas</h2>
+        <h2>Academias</h2>
         </p>
       </div>
 <table style="width:60%">
   <tr>
-    <th>Academias</th>
+    <th>Academia</th>
     <th>Horários</th>
+    <th>Nota</th>
   </tr>
   <% @gyms.each do |gym| %>
     <tr>
-      <td><%= gym.name%></td>    
+      <td><%= gym.name%></td>
       <td><%= gym.hour%></td>
+      <td><%= gym.rating%></td>
     </tr>
   <% end %>
 </table>

@@ -11042,3 +11042,995 @@ Did you mean?  set_cycle):
     21:   
   
 app/views/pages/hour.html.erb:18:in `_app_views_pages_hour_html_erb___3964929083188980466_70337656371320'
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:07:37 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (104.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "IF976"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "IF976"[0m
+  [1m[35m (222.7ms)[0m  [1m[35mCREATE DATABASE "IF976" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "IF976" ENCODING = 'unicode'[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3091087785219582750)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGyms (20180430215103)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "gyms" ("id" bigserial primary key, "rpa" integer, "microregion" character varying, "cnes" integer, "name" character varying, "adress" character varying, "bairro" character varying, "phone" character varying, "latitude" decimal, "longitude" decimal, "hour" character varying, "rating" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180430215103"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20180507061354)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying, "uid" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "token" character varying, "refresh_token" character varying, "oauth_expires_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180507061354"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-16 06:07:49.177611"], ["updated_at", "2018-05-16 06:07:49.177611"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3091087785219582750)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:07:54 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 269ms (Views: 261.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:07:57 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:07:59 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:08:00 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/ratings" for 177.158.105.95 at 2018-05-16 06:08:01 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#ratings as HTML
+  Rendering pages/ratings.html.erb within layouts/application
+  Rendered pages/ratings.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:     <th>Academias</th>
+    15:     <th>Notas</th>
+    16:   </tr>
+    17:   <% @gyms.each do |gym| %>
+    18:     <tr>
+    19:       <td><%= gym.name%></td>    
+    20:       <td><%= gym.rating%></td>
+  
+app/views/pages/ratings.html.erb:17:in `_app_views_pages_ratings_html_erb__4159888641522802811_25393120'
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:08:10 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 195ms (Views: 187.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:08:20 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:08:21 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:08:22 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/hour" for 177.158.105.95 at 2018-05-16 06:08:25 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#hour as HTML
+  Rendering pages/hour.html.erb within layouts/application
+  Rendered pages/hour.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:     <th>Academias</th>
+    15:     <th>Horários</th>
+    16:   </tr>
+    17:   <% @gyms.each do |gym| %>
+    18:     <tr>
+    19:       <td><%= gym.name%></td>    
+    20:       <td><%= gym.hour%></td>
+  
+app/views/pages/hour.html.erb:17:in `_app_views_pages_hour_html_erb___313367994700811254_70239257731920'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (104.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "IF976"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "IF976"[0m
+  [1m[35m (222.6ms)[0m  [1m[35mCREATE DATABASE "IF976" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "IF976" ENCODING = 'unicode'[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3091087785219582750)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGyms (20180430215103)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "gyms" ("id" bigserial primary key, "rpa" integer, "microregion" character varying, "cnes" integer, "name" character varying, "adress" character varying, "bairro" character varying, "phone" character varying, "latitude" decimal, "longitude" decimal, "hour" character varying, "rating" decimal, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180430215103"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20180507061354)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying, "uid" character varying, "first_name" character varying, "last_name" character varying, "email" character varying, "token" character varying, "refresh_token" character varying, "oauth_expires_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180507061354"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-16 06:15:03.667481"], ["updated_at", "2018-05-16 06:15:03.667481"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3091087785219582750)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 999999], ["name", "POLO ESEF"], ["adress", "AV GOVERNADOR AGAMENON MAGALHAES, S/N - SANTO AMARO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045586"], ["longitude", "-34.886363"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.929979"], ["updated_at", "2018-05-16 06:15:20.929979"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6664288], ["name", "US 358 ACADEMIA DA CIDADE POLO DE SANTO AMARO /JOAO DE BARROS"], ["adress", "AV AGAMENON MAGALHAES, S/N"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.044385959"], ["longitude", "-34.88799104"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.933244"], ["updated_at", "2018-05-16 06:15:20.933244"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "1"], ["cnes", 6865003], ["name", "US 374 ACADEMIA DA CIDADE POLO 13 DE MAIO"], ["adress", "PRACA 13 DE MAIO"], ["bairro", "SANTO AMARO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.056658194"], ["longitude", "-34.88019835"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.935637"], ["updated_at", "2018-05-16 06:15:20.935637"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664253], ["name", "US 356 ACADEMIA DA CIDADE POLO DA ILHA DO LEITE / MIGUEL DE CERVANTES"], ["adress", "PRACA MIGUEL DE CERVANTES"], ["bairro", "ILHA DO LEITE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.066801476"], ["longitude", "-34.89355356"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.937858"], ["updated_at", "2018-05-16 06:15:20.937858"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 1], ["microregion", "2"], ["cnes", 6664261], ["name", "US 357 ACADEMIA DA CIDADE POLO COQUE"], ["adress", "AV MARTINS LUTHER KING, S/N"], ["bairro", "JOANA BEZERRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.069517287"], ["longitude", "-34.897017"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.940136"], ["updated_at", "2018-05-16 06:15:20.940136"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA CHAO DE ESTRELAS"], ["adress", "RUA MARCILIO DIAS"], ["bairro", "CAMPINA DO BARRETO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.020622601"], ["longitude", "-34.87968359"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.942446"], ["updated_at", "2018-05-16 06:15:20.942446"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA JOVEM CAP"], ["adress", "RUA SUDESTE, S/N"], ["bairro", "CAJUEIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.014352817"], ["longitude", "-34.88325204"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.944779"], ["updated_at", "2018-05-16 06:15:20.944779"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6660398], ["name", "US 353 ACADEMIA DA CIDADE POLO ILHA DE JOANEIRO"], ["adress", "AV AGAMENON MAGALHAES "], ["bairro", "TORREAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041390408"], ["longitude", "-34.88334059"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.947444"], ["updated_at", "2018-05-16 06:15:20.947444"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6664245], ["name", "US 355 ACADEMIA DA CIDADE POLO HIPODROMO"], ["adress", "PRACA DO HIPODROMO"], ["bairro", "HIPODROMO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.032222022"], ["longitude", "-34.8860192"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.949789"], ["updated_at", "2018-05-16 06:15:20.949789"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "1"], ["cnes", 6916317], ["name", "US 377 ACADEMIA DA CIDADE POLO CHIE"], ["adress", "AV AGAMENON MAGALHAES"], ["bairro", "CAMPO GRANDE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.038132873"], ["longitude", "-34.87638771"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.951994"], ["updated_at", "2018-05-16 06:15:20.951994"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 9999999], ["name", "POLO CSU AFRANIO GODOY"], ["adress", "AV ANIBAL BENEVOLO, S/N"], ["bairro", "LINHA DO TIRO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010283367"], ["longitude", "-34.90327754"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.954264"], ["updated_at", "2018-05-16 06:15:20.954264"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 2], ["microregion", "3"], ["cnes", 6664237], ["name", "US 354 ACADEMIA DA CIDADE POLO ALTO DO CAPITAO"], ["adress", "RUA TUPIRACABA, S/N"], ["bairro", "DOIS UNIDOS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-7.999643463"], ["longitude", "-34.91377457"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.956526"], ["updated_at", "2018-05-16 06:15:20.956526"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO ERMIRIO DE MORAES"], ["adress", "AV 17 DE AGOSTO, 2388"], ["bairro", "CASA FORTE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028673668"], ["longitude", "-34.9258694"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.958788"], ["updated_at", "2018-05-16 06:15:20.958788"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PARQUE SANTANA"], ["adress", "RUA SANTANA, S/N - SANTANA"], ["bairro", "SANTANA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.041942302"], ["longitude", "-34.91801276"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.961333"], ["updated_at", "2018-05-16 06:15:20.961333"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664296], ["name", "US 359 ACADEMIA DA CIDADE POLO SITIO DA TRINDADE"], ["adress", "ESTRADA DO ARRAIAL, S/N"], ["bairro", "CASA AMARELA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.028879688"], ["longitude", "-34.91217231"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.963776"], ["updated_at", "2018-05-16 06:15:20.963776"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664318], ["name", "US 360 ACADEMIA DA CIDADE POLO DO MORRO DA CONCEICAO / ODETE GOMES DE ALMEIDA"], ["adress", "PRACA DO MORRO DA CONCEICAO, 589"], ["bairro", "MORRO DA CONCEICAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.019378056"], ["longitude", "-34.91499809"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.966075"], ["updated_at", "2018-05-16 06:15:20.966075"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "1"], ["cnes", 6664326], ["name", "US 361 ACADEMIA DA CIDADE POLO JAQUEIRA"], ["adress", "RUA DO FUTURO, S/N"], ["bairro", "JAQUEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.036524412"], ["longitude", "-34.90469063"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.968383"], ["updated_at", "2018-05-16 06:15:20.968383"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "2"], ["cnes", 7135823], ["name", "US 387 ACADEMIA DA CIDADE POLO UM POR TODOS"], ["adress", "RUA VILA UM POR TODOS, S/N"], ["bairro", "VASCO DA GAMA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.010439885"], ["longitude", "-34.9224429"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.970760"], ["updated_at", "2018-05-16 06:15:20.970760"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 3], ["microregion", "3"], ["cnes", 9999999], ["name", "US 380 POLO PRACA DO BURITY"], ["adress", "AVENIDA NORTE, S/N"], ["bairro", "MACAXEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.016742672"], ["longitude", "-34.92931483"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.973177"], ["updated_at", "2018-05-16 06:15:20.973177"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6664679], ["name", "US 363 ACADEMIA DA CIDADE POLO BEIRA RIO / TORRE"], ["adress", "AV BEIRA RIO, S/N"], ["bairro", "TORRE"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.046118215"], ["longitude", "-34.90401316"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.975369"], ["updated_at", "2018-05-16 06:15:20.975369"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 6865054], ["name", "US 375 ACADEMIA DA CIDADE POLO PRACA DO SALGUEIRO"], ["adress", "PRACA DO SALGUEIRO"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.042617606"], ["longitude", "-34.93825496"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.977766"], ["updated_at", "2018-05-16 06:15:20.977766"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "1"], ["cnes", 7626118], ["name", "US 398 ACADEMIA DA CIDADE POLO CAVOUCO"], ["adress", "AVENIDA ALVARES PEREIRA DE LIRA - IPUTINGA"], ["bairro", "IPUTINGA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.045333"], ["longitude", "-34.93145"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.980009"], ["updated_at", "2018-05-16 06:15:20.980009"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664717], ["name", " US 364 ACADEMIA DA CIDADE POLO DA PRACA DO ENGENHO DO MEIO, PARQUE ARNALDO ASSUNCAO"], ["adress", "PRACA DO ENGENHO DO MEIO "], ["bairro", "ENGENHO DO MEIO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057599618"], ["longitude", "-34.94339901"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.982339"], ["updated_at", "2018-05-16 06:15:20.982339"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 6664660], ["name", "US 362 ACADEMIA DA CIDADE POLO DA PRACA DA AV DO FORTE / TORROES / ARRAIAL NOVO DO BOM"], ["adress", "PRACA DA AVENIDA DO FORTE"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.057458224"], ["longitude", "-34.93121509"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.984548"], ["updated_at", "2018-05-16 06:15:20.984548"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "2"], ["cnes", 7135874], ["name", "US 386 ACADEMIA DA CIDADE POLO RODA DE FOGO"], ["adress", "AV PROFESSOR ARTUR COUTINHO, S/N"], ["bairro", "TORROES"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.058097415"], ["longitude", "-34.93740353"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.986919"], ["updated_at", "2018-05-16 06:15:20.986919"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 6664741], ["name", "US 365 ACADEMIA DA CIDADE POLO DA VARZEA/PRACA DO POETA"], ["adress", "PRACA DO POETA/VARZEA"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.034308222"], ["longitude", "-34.95074169"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.989226"], ["updated_at", "2018-05-16 06:15:20.989226"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 4], ["microregion", "3"], ["cnes", 7018452], ["name", "US 382 ACADEMIA DA CIDADE POLO VARZEA"], ["adress", "RUA CEL PACHECO"], ["bairro", "VARZEA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.049217173"], ["longitude", "-34.95946709"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.991439"], ["updated_at", "2018-05-16 06:15:20.991439"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 9999999], ["name", "POLO PRACA DO ABC"], ["adress", "AV MANUEL GONCALVES DA LUZA"], ["bairro", "MUSTARDINHA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.073359317"], ["longitude", "-34.9186726"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.995437"], ["updated_at", "2018-05-16 06:15:20.995437"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "1"], ["cnes", 6664814], ["name", "US 367 ACADEMIA DA CIDADE POLO DE SAN MARTIN"], ["adress", "PATIO DE EVENTOS NOEL RODRIGUES"], ["bairro", "SAN MARTIN"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.070989066"], ["longitude", "-34.92877891"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:20.997798"], ["updated_at", "2018-05-16 06:15:20.997798"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 379 POLO PRACA SIMAO BORBA"], ["adress", "RUA SIMAO BORBA, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.098664953"], ["longitude", "-34.9258452"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.000106"], ["updated_at", "2018-05-16 06:15:21.000106"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 381 POLO PRACA HEROIS DA RESTAURACAO"], ["adress", "RUA CAJA"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.097247927"], ["longitude", "-34.93565796"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.002369"], ["updated_at", "2018-05-16 06:15:21.002369"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "2"], ["cnes", 9999999], ["name", "US 383 POLO PRACA DAS LAVADEIRAS"], ["adress", "RUA PALMARES, S/N"], ["bairro", "AREIAS"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.094536677"], ["longitude", "-34.93669277"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.005036"], ["updated_at", "2018-05-16 06:15:21.005036"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 6664806], ["name", "US 366 ACADEMIA DA CIDADE POLO DA PRACA DE JARDIM SAO PAULO"], ["adress", "PRACA DE JARDIM SAO PAULO "], ["bairro", "JARDIM SAO PAULO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.081612226"], ["longitude", "-34.93826531"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.007233"], ["updated_at", "2018-05-16 06:15:21.007233"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 5], ["microregion", "3"], ["cnes", 7508557], ["name", "US 396 POLO VILA DOS MILAGRES"], ["adress", "RUA CANTORA DALVA DE OLIVEIRA, S/N - BARRO"], ["bairro", "BARRO"], ["phone", "3355-2820"], ["latitude", "-8.107199"], ["longitude", "-34.9542199"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.009509"], ["updated_at", "2018-05-16 06:15:21.009509"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6664911], ["name", "US 368 ACADEMIA DA CIDADE POLO DA PRAIA DE BOA VIAGEM"], ["adress", "SEGUNDO JARDIM DE BOA VIAGEM"], ["bairro", "BOA VIAGEM"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.101778875"], ["longitude", "-34.8850463"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.011898"], ["updated_at", "2018-05-16 06:15:21.011898"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665012], ["name", "US 369 ACADEMIA DA CIDADE POLO DE BRASILIA TEIMOSA"], ["adress", "RUA JOAO MARQUES DOS SANTOS"], ["bairro", "BRASILIA TEIMOSA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.085577821"], ["longitude", "-34.87843691"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.014146"], ["updated_at", "2018-05-16 06:15:21.014146"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665063], ["name", "US 371 ACADEMIA DA CIDADE POLO IPSEP"], ["adress", "PRACA SENADOR ROBERTO KENEDY"], ["bairro", "IPSEP"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.116100104"], ["longitude", "-34.9190577"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.016422"], ["updated_at", "2018-05-16 06:15:21.016422"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 6665071], ["name", "US 372 ACADEMIA DA CIDADE POLO LAGOA DO ARACA"], ["adress", "AV JOSE F LINS, LAGOA DO ARACA"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.0966176"], ["longitude", "-34.9152387"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.018637"], ["updated_at", "2018-05-16 06:15:21.018637"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "1"], ["cnes", 7018525], ["name", "US 384 POLO PRACA CAFESOPOLIS"], ["adress", "RUA CAFESOPOLIS, S/N"], ["bairro", "IMBIRIBEIRA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1014676"], ["longitude", "-34.90869305"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.020938"], ["updated_at", "2018-05-16 06:15:21.020938"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "2"], ["cnes", 7057466], ["name", "USF 385 POLO PRACA JORDAO"], ["adress", "AV ALBERTO LUNDGREN, S/N"], ["bairro", "JORDAO"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.1366891"], ["longitude", "-34.93687444"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.023166"], ["updated_at", "2018-05-16 06:15:21.023166"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "gyms" ("rpa", "microregion", "cnes", "name", "adress", "bairro", "phone", "latitude", "longitude", "hour", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["rpa", 6], ["microregion", "3"], ["cnes", 6665020], ["name", "US 370 ACADEMIA DA CIDADE POLO PRACA DA VITORIA"], ["adress", "PRACA DO IBURA, UR 01"], ["bairro", "IBURA"], ["phone", "3355-2820/3355-2812"], ["latitude", "-8.118207097"], ["longitude", "-34.94611665"], ["hour", "05:30 as 08:30 / 17:00 as 19:00"], ["rating", "0.0"], ["created_at", "2018-05-16 06:15:21.025500"], ["updated_at", "2018-05-16 06:15:21.025500"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:21:59 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pages_ratings_path' for #<#<Class:0x00000004d5aa80>:0x007f79289d8ef8>
+Did you mean?  pages_favorites_path):
+    33:             <li><%= link_to 'Busca', pages_search_path=%></li>
+    34:             <li><%= link_to 'Favoritos', pages_favorites_path=%></li>
+    35:             <li><%= link_to 'Sobre', pages_about_path=%></li>
+    36:             <li><%= link_to 'Notas', pages_ratings_path=%></li>
+    37:             <li><%= link_to 'Horários', pages_hour_path=%></li>
+    38:             <li><a href=https://github.com/gmachamilton/Aquidemia-Projeto-IF977>Github link</a></li>
+    39:           </ul>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___2103739717446552789_70079174657720'
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:22:36 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 183ms (Views: 176.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:22:40 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  Rendered pages/gyms.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:22:42 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:22:43 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:22:43 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  Rendered pages/gyms.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:22:44 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:22:45 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  Rendered pages/gyms.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:23:30 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 190ms (Views: 182.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:23:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.6ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 61ms (Views: 50.3ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:25:58 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:26:01 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:22 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:26:23 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:26:23 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:26:24 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:26:25 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:26:26 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:26 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:26:27 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:27 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:26:28 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:26:28 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:29 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:26:29 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:26:47 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:26:47 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:26:48 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:26:49 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:49 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:26:49 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:26:50 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:31:48 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 194ms (Views: 186.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:31:50 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:31:50 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:31:51 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:33:09 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 194ms (Views: 187.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:33:14 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:33:17 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:33:20 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:33:20 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:33:21 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:33:22 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:33:23 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:34:48 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:34:50 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:34:50 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:35:22 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 191ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:35:24 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 62ms (Views: 52.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:35:30 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:35:31 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:35:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:35:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:36:04 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 186ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:36:06 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 58ms (Views: 48.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:36:11 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:36:11 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:36:12 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:36:13 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 177.158.105.95 at 2018-05-16 06:36:14 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:36:15 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:36:15 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:36:16 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:36:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:36:35 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:36:36 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:36:36 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:36:38 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:37:17 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:37:18 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:37:18 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:37:18 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:37:20 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/about" for 177.158.105.95 at 2018-05-16 06:37:30 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/gyms" for 177.158.105.95 at 2018-05-16 06:37:30 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:37:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search" for 177.158.105.95 at 2018-05-16 06:37:32 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#search as HTML
+  Rendering pages/search.html.erb within layouts/application
+  Rendered pages/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/favorites" for 177.158.105.95 at 2018-05-16 06:37:33 +0000
+Cannot render console from 177.158.105.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#favorites as HTML
+  Rendering pages/favorites.html.erb within layouts/application
+  Rendered pages/favorites.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
