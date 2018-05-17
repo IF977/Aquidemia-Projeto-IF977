@@ -12052,3 +12052,21 @@ Processing by PagesController#gyms as HTML
 Completed 200 OK in 62ms (Views: 51.1ms | ActiveRecord: 7.3ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3091087785219582750)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ThumbsUpMigration (20180517143151)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "votes"[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE "votes" ("id" bigserial primary key, "vote" boolean DEFAULT 'f' NOT NULL, "voteable_type" character varying NOT NULL, "voteable_id" bigint NOT NULL, "voter_type" character varying, "voter_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_voteable_type_and_voteable_id" ON "votes"  ("voteable_type", "voteable_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_voter_type_and_voter_id" ON "votes"  ("voter_type", "voter_id")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_voter_id_and_voter_type" ON "votes"  ("voter_id", "voter_type")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_votes_on_voteable_id_and_voteable_type" ON "votes"  ("voteable_id", "voteable_type")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "fk_one_vote_per_user_per_entity" ON "votes"  ("voter_id", "voter_type", "voteable_id", "voteable_type")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517143151"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3091087785219582750)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
