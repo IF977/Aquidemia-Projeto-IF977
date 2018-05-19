@@ -1,17 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Number:</strong>
-  <%= @gym.number %>
-</p>
-
-<p>
-  <strong>Rpa:</strong>
-  <%= @gym.rpa %>
-</p>
-
-<p>
-  <strong>Microregion:</strong>
+  <strong>Microrregião:</strong>
   <%= @gym.microregion %>
 </p>
 
@@ -21,12 +11,12 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @gym.name %>
 </p>
 
 <p>
-  <strong>Adress:</strong>
+  <strong>Endereço:</strong>
   <%= @gym.adress %>
 </p>
 
@@ -36,29 +26,26 @@
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Telefone:</strong>
   <%= @gym.phone %>
 </p>
 
 <p>
-  <strong>Latitude:</strong>
-  <%= @gym.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @gym.longitude %>
-</p>
-
-<p>
-  <strong>Hour:</strong>
+  <strong>Horário:</strong>
   <%= @gym.hour %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
+  <strong>Nota:</strong>
   <%= @gym.rating %>
 </p>
 
-<%= link_to 'Edit', edit_gym_path(@gym) %> |
-<%= link_to 'Back', gyms_path %>
+<p>
+<%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+<%= @gym.plusminus %>
+<%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
+</p>
+
+<p>
+<%= link_to 'Back', pages_gyms_path %>
+</p>

@@ -1,5 +1,25 @@
 class GymsController < ApplicationController
   before_action :set_gym, only: [:show, :edit, :update, :destroy]
+  
+  def vote_up
+    begin
+      if current_user.voted_for?(@gym = Gym.find(params[:id]))
+        render :show => true, :status => 404
+      else
+        current_user.vote_for(@gym = Gym.find(params[:id]))
+        render :show => true, :status => 200
+      end
+    end
+  end
+  
+  def vote_down
+    begin
+      current_user.vote_against(@gym = Gym.find(params[:id]))
+      render :show => true, :status => 200
+    rescue ActiveRecord::RecordInvalid
+      render :show => true, :status => 404
+    end
+  end
 
   # GET /gyms
   # GET /gyms.json
@@ -10,7 +30,7 @@ class GymsController < ApplicationController
   # GET /gyms/1
   # GET /gyms/1.json
   def show
-    @gyms = Gym.show
+    @gym = Gym.find(params[:id])
   end
 
   # GET /gyms/new

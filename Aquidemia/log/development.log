@@ -12070,3 +12070,768 @@ Migrating to ThumbsUpMigration (20180517143151)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3091087785219582750)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:31:50 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.0.0) lib/pg.rb:56:in `initialize'
+pg (1.0.0) lib/pg.rb:56:in `new'
+pg (1.0.0) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:32:10 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 351ms (Views: 336.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:32:14 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (1.1ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 60ms (Views: 51.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:34:07 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 217ms (Views: 206.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:34:08 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:34:11 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (2.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `show' for #<Class:0x007fc32802fb00>):
+  
+app/controllers/gyms_controller.rb:22:in `show'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:35:07 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 219ms (Views: 208.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:35:08 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:35:10 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (110.7ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `vote_down_gym_path' for #<#<Class:0x007f42bc07cd98>:0x007f42c0ab1828>
+Did you mean?  vote_up_gym_path):
+    42: 
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+  
+app/views/gyms/show.html.erb:45:in `_app_views_gyms_show_html_erb__3990207551586733498_69962299599640'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:36:01 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 227ms (Views: 215.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:36:03 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:36:04 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (171.7ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `vote_down_gym_path' for #<#<Class:0x007faaa912d800>:0x007faaa91152a0>
+Did you mean?  vote_up_gym_path):
+    42: 
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+  
+app/views/gyms/show.html.erb:45:in `_app_views_gyms_show_html_erb__4460961635945778812_70185478878940'
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:36:18 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (93.9ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `vote_down_gym_path' for #<#<Class:0x007faaa9a927d8>:0x007faaa9a909d8>
+Did you mean?  vote_up_gym_path):
+    42: 
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+  
+app/views/gyms/show.html.erb:45:in `_app_views_gyms_show_html_erb__4460961635945778812_70185483802680'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:36:30 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 234ms (Views: 221.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:36:32 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 70ms (Views: 63.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:36:33 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (130.8ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `vote_down_gym_path' for #<#<Class:0x007f49c8eb74e0>:0x007f49c8ea2a40>
+Did you mean?  vote_up_gym_path):
+    42: 
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+  
+app/views/gyms/show.html.erb:45:in `_app_views_gyms_show_html_erb__851521975730225602_69977440150840'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:38:00 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 221ms (Views: 210.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:38:01 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:38:03 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `plusminus_tally' for #<Gym:0x000000042bb4d0>
+Did you mean?  plusminus):
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+    49: <p>
+  
+app/views/gyms/show.html.erb:46:in `_app_views_gyms_show_html_erb___2837734186707114736_69922810721540'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:38:32 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 204ms (Views: 193.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:38:34 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.6ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 67ms (Views: 59.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:38:35 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  Rendered gyms/show.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `plusminus_tally' for #<Gym:0x007f7645159560>
+Did you mean?  plusminus):
+    43: <p>
+    44: <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+    45: <%= link_to('Like', vote_down_gym_path(@gym), :method => :post) %>
+    46: <%= @gym.plusminus_tally %>
+    47: </p>
+    48: 
+    49: <p>
+  
+app/views/gyms/show.html.erb:46:in `_app_views_gyms_show_html_erb___3650813263237649258_70072970917400'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:41:44 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 207ms (Views: 194.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:41:45 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 45ms (Views: 38.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:41:47 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 52ms (Views: 41.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:42:05 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:42:06 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:42:07 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:42:10 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"5CorT1HND0wZt+419/vIlvrfiIOEZgwo0AwBaxcQNkPrsFhOy9QqZOhI2mLF1EPfBHiDSvt5V2WlyZ+Hxsd+Aw==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVote Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."voter_type" = $3 AND "votes"."voter_id" = $4 LIMIT $5[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["voter_type", "User"], ["voter_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "votes" ("vote", "voteable_type", "voteable_id", "voter_type", "voter_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["vote", "t"], ["voteable_type", "Gym"], ["voteable_id", 1], ["voter_type", "User"], ["voter_id", 1], ["created_at", "2018-05-19 02:42:10.967031"], ["updated_at", "2018-05-19 02:42:10.967031"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.2ms)
+
+
+  
+ActionView::MissingTemplate (Missing template gyms/vote_up, application/vote_up with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/pls/Aquidemia-Projeto-IF977/Aquidemia/app/views"
+  * "/usr/local/rvm/gems/ruby-2.4.1/gems/twitter-bootstrap-rails-4.0.0/app/views"
+):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:44:05 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 215ms (Views: 204.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:44:07 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:44:08 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:44:09 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"UL1NXGGb49GrNzfLTyMG9V+6fKbr+gMSCqG3OB/puUNfJz5d+4LG+VrIA5x9DI28oR13b5TlWF9/ZCnUzj7xAw==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."voter_type" = $3 AND "votes"."voter_id" = $4 LIMIT $5[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["voter_type", "User"], ["voter_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Voteable has already been taken):
+  
+app/controllers/gyms_controller.rb:6:in `vote_up'
+Started POST "/gyms/1/vote_down" for 177.207.77.230 at 2018-05-19 02:44:19 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_down as HTML
+  Parameters: {"authenticity_token"=>"UL1NXGGb49GrNzfLTyMG9V+6fKbr+gMSCqG3OB/puUNfJz5d+4LG+VrIA5x9DI28oR13b5TlWF9/ZCnUzj7xAw==", "id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."voter_type" = $3 AND "votes"."voter_id" = $4 LIMIT $5[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["voter_type", "User"], ["voter_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Voteable has already been taken):
+  
+app/controllers/gyms_controller.rb:15:in `vote_down'
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:44:24 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:44:26 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:44:30 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"cnB9I/D7iHqBD81K2RDvl6iun9EV6KDHqeoF22rAvLN96g4iauKtUnDw+R3rP2TeVgmUGGr3+4rcL5s3uxf08w==", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."voter_type" = $3 AND "votes"."voter_id" = $4 LIMIT $5[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["voter_type", "User"], ["voter_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Voteable has already been taken):
+  
+app/controllers/gyms_controller.rb:6:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:50:45 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 218ms (Views: 207.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:50:47 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.5ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:50:48 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:50:50 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"O7Ed9ZlGvUvEdjWnWLmO7ru9ZqlV5pIAg8kurl2M75I0K270A1+YYzWJAfBqlgWnRRptYCr5yU32DLBCjFun0g==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."vote" = $3 AND "votes"."voteable_id" = $4 AND "votes"."voteable_type" = $5[0m  [["voter_id", 1], ["voter_type", "User"], ["vote", "t"], ["voteable_id", 1], ["voteable_type", "Gym"]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template gyms/vote_up, application/vote_up with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/pls/Aquidemia-Projeto-IF977/Aquidemia/app/views"
+  * "/usr/local/rvm/gems/ruby-2.4.1/gems/twitter-bootstrap-rails-4.0.0/app/views"
+):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:52:22 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:52:24 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:52:25 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:52:26 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"2xwEAqk7HqvLWfd9bE2W6SbkFLnyCRUPU+HKxi1vU2TUhncDMyI7gzqmwypeYh2g2EMfcI0WTkImJFQq/LgbJA==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."vote" = $3 AND "votes"."voteable_id" = $4 AND "votes"."voteable_type" = $5[0m  [["voter_id", 1], ["voter_type", "User"], ["vote", "t"], ["voteable_id", 1], ["voteable_type", "Gym"]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template gyms/vote_up, application/vote_up with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/pls/Aquidemia-Projeto-IF977/Aquidemia/app/views"
+  * "/usr/local/rvm/gems/ruby-2.4.1/gems/twitter-bootstrap-rails-4.0.0/app/views"
+):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:53:04 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:53:05 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 62ms (Views: 56.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:53:06 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:53:08 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"s0Dlx7hn8ahDvvZqamiZv6onaktbof8fQ11MuByfJ/y82pbGIn7UgLJBwj1YRxL2VIBhgiS+pFI2mNJUzUhvvA==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."vote" = $3 AND "votes"."voteable_id" = $4 AND "votes"."voteable_type" = $5[0m  [["voter_id", 1], ["voter_type", "User"], ["vote", "t"], ["voteable_id", 1], ["voteable_type", "Gym"]]
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `gym' for #<GymsController:0x007f7412093bd8>
+Did you mean?  @gym
+               gem):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:53:16 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:53:17 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:53:18 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.2ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 52ms (Views: 47.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:53:19 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"gEFKODv77Nu1Elb4I+cYXqKL+up7mK9VXKaFU6DLA5CP2zk5oeLJ80TtYq8RyJMXXCzxIwSH9BgpYxu/cRxL0A==", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."vote" = $3 AND "votes"."voteable_id" = $4 AND "votes"."voteable_type" = $5[0m  [["voter_id", 1], ["voter_type", "User"], ["vote", "t"], ["voteable_id", 1], ["voteable_type", "Gym"]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template gyms/vote_up, application/vote_up with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/pls/Aquidemia-Projeto-IF977/Aquidemia/app/views"
+  * "/usr/local/rvm/gems/ruby-2.4.1/gems/twitter-bootstrap-rails-4.0.0/app/views"
+):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
+Started GET "/" for 177.207.77.230 at 2018-05-19 02:53:40 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/pages/gyms" for 177.207.77.230 at 2018-05-19 02:53:41 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#gyms as HTML
+  Rendering pages/gyms.html.erb within layouts/application
+  [1m[36mGym Load (0.4ms)[0m  [1m[34mSELECT "gyms".* FROM "gyms"[0m
+  Rendered pages/gyms.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 47ms (Views: 40.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/gyms/1" for 177.207.77.230 at 2018-05-19 02:53:43 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Gym Load (0.0ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering gyms/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "t"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voteable_id" = $1 AND "votes"."voteable_type" = $2 AND "votes"."vote" = $3[0m  [["voteable_id", 1], ["voteable_type", "Gym"], ["vote", "f"]]
+  Rendered gyms/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/gyms/1/vote_up" for 177.207.77.230 at 2018-05-19 02:53:44 +0000
+Cannot render console from 177.207.77.230! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GymsController#vote_up as HTML
+  Parameters: {"authenticity_token"=>"5UZxTpcQpf2Sd3W53mfcozrx5ATdnrw9QCpXGy+uXS/q3AJPDQmA1WOIQe7sSFfqxFbvzaKB53A178n3/nkVbw==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGym Load (0.3ms)[0m  [1m[34mSELECT  "gyms".* FROM "gyms" WHERE "gyms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."vote" = $3 AND "votes"."voteable_id" = $4 AND "votes"."voteable_type" = $5[0m  [["voter_id", 1], ["voter_type", "User"], ["vote", "t"], ["voteable_id", 1], ["voteable_type", "Gym"]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template gyms/vote_up, application/vote_up with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/pls/Aquidemia-Projeto-IF977/Aquidemia/app/views"
+  * "/usr/local/rvm/gems/ruby-2.4.1/gems/twitter-bootstrap-rails-4.0.0/app/views"
+):
+  
+app/controllers/gyms_controller.rb:7:in `vote_up'
