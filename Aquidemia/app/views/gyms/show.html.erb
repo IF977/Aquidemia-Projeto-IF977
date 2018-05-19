@@ -37,14 +37,17 @@
 
 <p>
   <strong>Nota:</strong>
-  <%= @gym.rating %>
+  <%= @gym.plusminus %>
 </p>
 
-<p>
-<%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
-<%= @gym.plusminus %>
-<%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
-</p>
+<% if current_user  %>
+  <p>
+  <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
+  <%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
+  </p>
+<% else %>
+  <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>
+<% end %>
 
 <p>
 <%= link_to 'Back', pages_gyms_path %>

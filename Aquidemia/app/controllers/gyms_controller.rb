@@ -3,21 +3,37 @@ class GymsController < ApplicationController
   
   def vote_up
     begin
-      if current_user.voted_for?(@gym = Gym.find(params[:id]))
-        render :show => true, :status => 404
+      @gym = Gym.find(params[:id])
+      if current_user.voted_for?(@gym)
+        # voter wants to undo his vote
+        current_user.unvote_for(@gym)
+        render :show
+      elsif current_user.voted_against?(@gym)
+        current_user.unvote_for(@gym)
+        current_user.vote_for(@gym)
+        render :show
       else
-        current_user.vote_for(@gym = Gym.find(params[:id]))
-        render :show => true, :status => 200
+        current_user.vote_for(@gym)
+        render :show
       end
     end
   end
-  
+
   def vote_down
     begin
-      current_user.vote_against(@gym = Gym.find(params[:id]))
-      render :show => true, :status => 200
-    rescue ActiveRecord::RecordInvalid
-      render :show => true, :status => 404
+      @gym = Gym.find(params[:id])
+      if current_user.voted_against?(@gym)
+        # voter wants to undo his vote
+        current_user.unvote_for(@gym)
+        render :show
+      elsif current_user.voted_for?(@gym)
+        current_user.unvote_for(@gym)
+        current_user.vote_against(@gym)
+        render :show
+      else
+        current_user.vote_against(@gym)
+        render :show
+      end
     end
   end
 
