@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Rating helper
+gem 'thumbs_up'
 # Google authentication helper
 gem 'omniauth-google-oauth2'
 # Gem to hide Google API keys
