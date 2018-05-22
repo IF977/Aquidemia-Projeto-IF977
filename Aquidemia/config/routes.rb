@@ -2,7 +2,15 @@ Rails.application.routes.draw do
   
   get 'pages/gyms'
 
-  resources :gyms
+  resources :gyms do
+  member do
+    post :vote_up
+  end
+
+  member do
+    post :vote_down
+  end
+  end
   # index page / root url
   root 'pages#home', as: 'home'
   

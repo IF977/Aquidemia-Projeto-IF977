@@ -10,12 +10,14 @@
     <th>Academia</th>
     <th>Horários</th>
     <th>Nota</th>
+    <th></th>
   </tr>
   <% @gyms.each do |gym| %>
     <tr>
       <td><%= gym.name%></td>
       <td><%= gym.hour%></td>
-      <td><%= gym.rating%></td>
+      <td><%= gym.plusminus%></td>
+      <td><%= link_to 'Detalhes', gym %></td>
     </tr>
   <% end %>
 </table>
