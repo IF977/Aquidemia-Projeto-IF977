@@ -1,54 +1,68 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="jumbotron">  
+      <p id="notice"><%= notice %></p>
+       <p>
+        <strong>Nome:</strong>
+        <%= @gym.name %>
+      </p>
+      
+      <p>
+        <strong>Microrregião:</strong>
+        <%= @gym.microregion %>
+      </p>
+      
+      <p>
+        <strong>Cnes:</strong>
+        <%= @gym.cnes %>
+      </p>
+      
+      <p>
+        <strong>Endereço:</strong>
+        <%= @gym.adress %>
+      </p>
+      
+      <p>
+        <strong>Bairro:</strong>
+        <%= @gym.bairro %>
+      </p>
+      
+      <p>
+        <strong>Telefone:</strong>
+        <%= @gym.phone %>
+      </p>
+      
+      <p>
+        <strong>Horário:</strong>
+        <%= @gym.hour %>
+      </p>
+      
+      <p>
+        <strong>Nota:</strong>
+        <table style="width:30%">      
+            <tr>
+              <th>Likes</th>
+              <th>Dislikes</th>
+            </tr>
+              <td><%= @gym.votes_for %></td>
+              <td><%= @gym.votes_against %></td>
+            </tr>
+          </table>
+      </p>
+      
+      <% if current_user  %>
+        <p>
+        Avaliação:
+        <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959971028238348/thumbs-up-hand-symbol_1.png", border: 0), vote_up_gym_path(@gym), :method => :post) %>
+        |
+        <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959953366024204/thumbs-down-silhouette_1.png", border: 0), vote_down_gym_path(@gym), :method => :post) %>
+        </p>
+      <% else %>
+        <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>
+      <% end %>
+      
+      <p>
+      <%= link_to 'Voltar', pages_gyms_path %>
+      </p>
+</div>
 
-<p>
-  <strong>Microrregião:</strong>
-  <%= @gym.microregion %>
-</p>
-
-<p>
-  <strong>Cnes:</strong>
-  <%= @gym.cnes %>
-</p>
-
-<p>
-  <strong>Nome:</strong>
-  <%= @gym.name %>
-</p>
-
-<p>
-  <strong>Endereço:</strong>
-  <%= @gym.adress %>
-</p>
-
-<p>
-  <strong>Bairro:</strong>
-  <%= @gym.bairro %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @gym.phone %>
-</p>
-
-<p>
-  <strong>Horário:</strong>
-  <%= @gym.hour %>
-</p>
-
-<p>
-  <strong>Nota:</strong>
-  <%= @gym.plusminus %>
-</p>
-
-<% if current_user  %>
-  <p>
-  <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
-  <%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
-  </p>
-<% else %>
-  <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>
-<% end %>
-
-<p>
-<%= link_to 'Back', pages_gyms_path %>
-</p>
+<p><div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
