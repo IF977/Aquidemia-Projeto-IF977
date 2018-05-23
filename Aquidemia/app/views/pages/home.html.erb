@@ -16,7 +16,6 @@
         <p></p>
         <p class="lead">
          <% if current_user  %>
-           <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
            <h3>Bem vindo, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
            <%= link_to "Sair", logout_path %>
          <% else %>
