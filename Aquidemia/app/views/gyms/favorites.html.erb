@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Favoritos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gyms.each do |gym| %>
+    <% if current_user.voted_for?(Gym.find(gym.id)) %>
+      <tr>
+        <td><%= gym.name %></td>
+      </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   get 'pages/gyms'
 
+  get 'gyms/favorites' => 'gyms#favorites'
+
   resources :gyms do
   member do
     post :vote_up
