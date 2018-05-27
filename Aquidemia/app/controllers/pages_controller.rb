@@ -5,4 +5,9 @@ class PagesController < ApplicationController
   def gyms
     @gyms = Gym.all
   end
+  
+  def search
+    @gyms = Gym.all
+  end
+  
 end
