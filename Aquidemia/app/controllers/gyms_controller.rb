@@ -1,10 +1,19 @@
 class GymsController < ApplicationController
   before_action :set_gym, only: [:show, :edit, :update, :destroy]
   
-  def favorites
-    @gyms = Gym.all
+  def add_favorite
+    begin
+      @gym = Gym.find(params[:id])
+      if current_user.following?(@gym)
+        current_user.stop_following(@gym)
+        render :show
+      else
+        current_user.follow(@gym)
+        render :show
+      end
+    end
   end
-  
+        
   def vote_up
     begin
       @gym = Gym.find(params[:id])

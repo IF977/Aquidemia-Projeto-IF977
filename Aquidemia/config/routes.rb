@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   
   get 'pages/gyms'
 
-  get 'gyms/favorites' => 'gyms#favorites'
-
   resources :gyms do
   member do
     post :vote_up
@@ -11,6 +9,10 @@ Rails.application.routes.draw do
 
   member do
     post :vote_down
+  end
+  
+  member do
+    post :add_favorite
   end
   end
   # index page / root url

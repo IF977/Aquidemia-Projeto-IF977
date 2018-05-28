@@ -5,30 +5,24 @@
           <h2>Favoritos</h2>
           </p>
         </div>
-<table style="width:100%">      
+<table style="width:100%">
   <tr>
     <th>Academia</th>
+    <th></th>
   </tr>
-    <td>Academia 1</td>
-  </tr>
+  <% current_user.all_following.each do |gym| %>
+    <tr>
+      <td><%= gym.name%></td>
+      <td><%= link_to 'Detalhes', gym %></td>
+    </tr>
+  <% end %>
 </table>
 
 <% else %>
-   <body>
+  <body>
     <div class="container">
       <div class="jumbotron">
-        
         <h3 class="display-4">Login necessário!</h3>
         <p class="lead"></p>
-        <hr class="my-4">
-        <p></p>
-        <p class="lead">
-         <% if current_user  %>
-           <h3>Bem vindo, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
-           <%= link_to "Sair", logout_path %>
-         <% else %>
-           <%= link_to image_tag("https://media.discordapp.net/attachments/423272905783377933/446787017079128064/login_google.png", border: 0), "/auth/google" %>  
-         <% end %>
-        </p>
       </div>
 <% end %>

@@ -7,6 +7,8 @@ end
 
 # Rating helper
 gem 'thumbs_up'
+# Favorites helper
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 # Google authentication helper
 gem 'omniauth-google-oauth2'
 # Gem to hide Google API keys

@@ -42,9 +42,11 @@
             <tr>
               <th>Likes</th>
               <th>Dislikes</th>
+              <th>Favoritos</th>
             </tr>
               <td><%= @gym.votes_for %></td>
               <td><%= @gym.votes_against %></td>
+              <td><%= @gym.followers_count %></td>
             </tr>
           </table>
       </p>
@@ -55,6 +57,8 @@
         <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959971028238348/thumbs-up-hand-symbol_1.png", border: 0), vote_up_gym_path(@gym), :method => :post) %>
         |
         <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959953366024204/thumbs-down-silhouette_1.png", border: 0), vote_down_gym_path(@gym), :method => :post) %>
+        |
+        <%= link_to('Adicione aos favoritos', add_favorite_gym_path(@gym), :method => :post) %>
         </p>
       <% else %>
         <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>

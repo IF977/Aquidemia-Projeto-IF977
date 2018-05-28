@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   acts_as_voter
-  
+  acts_as_follower
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
