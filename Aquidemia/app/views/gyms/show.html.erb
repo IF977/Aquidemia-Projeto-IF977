@@ -52,11 +52,17 @@
       </p>
       
       <% if current_user  %>
+        <% if current_user.voted_for?(@gym) %>
+          <p>Você avaliou essa academia positivamente</p>
+        <% end %>
+        <% if current_user.voted_against?(@gym) %>
+          <p>Você avaliou essa academia negativamente</p>
+        <% end %>
         <p>
         Avaliação:
-        <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959971028238348/thumbs-up-hand-symbol_1.png", border: 0), vote_up_gym_path(@gym), :method => :post) %>
+        <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
         |
-        <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959953366024204/thumbs-down-silhouette_1.png", border: 0), vote_down_gym_path(@gym), :method => :post) %>
+        <%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
         |
         <% if current_user.following?(@gym) %>
           <%= link_to('Remova dos favoritos', remove_favorite_gym_path(@gym), :method => :post) %>
