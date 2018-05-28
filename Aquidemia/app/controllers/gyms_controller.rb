@@ -4,29 +4,27 @@ class GymsController < ApplicationController
   def add_favorite
     begin
       @gym = Gym.find(params[:id])
-      if current_user.following?(@gym)
-        current_user.stop_following(@gym)
-        render :show
-      else
-        current_user.follow(@gym)
-        render :show
-      end
+      current_user.follow(@gym)
+      render :show
     end
   end
-        
+  
+  def remove_favorite
+    begin
+      @gym = Gym.find(params[:id])
+      current_user.stop_following(@gym)
+      render :show
+    end
+  end
+     
   def vote_up
     begin
       @gym = Gym.find(params[:id])
       if current_user.voted_for?(@gym)
-        # voter wants to undo his vote
         current_user.unvote_for(@gym)
-        render :show
-      elsif current_user.voted_against?(@gym)
-        current_user.unvote_for(@gym)
-        current_user.vote_for(@gym)
         render :show
       else
-        current_user.vote_for(@gym)
+        current_user.vote_exclusively_for(@gym)   
         render :show
       end
     end
@@ -36,20 +34,14 @@ class GymsController < ApplicationController
     begin
       @gym = Gym.find(params[:id])
       if current_user.voted_against?(@gym)
-        # voter wants to undo his vote
         current_user.unvote_for(@gym)
-        render :show
-      elsif current_user.voted_for?(@gym)
-        current_user.unvote_for(@gym)
-        current_user.vote_against(@gym)
         render :show
       else
-        current_user.vote_against(@gym)
+        current_user.vote_exclusively_against(@gym)   
         render :show
       end
     end
   end
-
   # GET /gyms
   # GET /gyms.json
   def index

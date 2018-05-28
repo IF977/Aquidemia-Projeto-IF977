@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   member do
     post :add_favorite
   end
+  
+  member do
+    post :remove_favorite
+  end
   end
   # index page / root url
   root 'pages#home', as: 'home'

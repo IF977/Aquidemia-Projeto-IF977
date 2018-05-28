@@ -58,7 +58,11 @@
         |
         <%= link_to(image_tag("https://media.discordapp.net/attachments/405409883064893440/448959953366024204/thumbs-down-silhouette_1.png", border: 0), vote_down_gym_path(@gym), :method => :post) %>
         |
-        <%= link_to('Adicione aos favoritos', add_favorite_gym_path(@gym), :method => :post) %>
+        <% if current_user.following?(@gym) %>
+          <%= link_to('Remova dos favoritos', remove_favorite_gym_path(@gym), :method => :post) %>
+        <% else %>
+          <%= link_to('Adicione aos favoritos', add_favorite_gym_path(@gym), :method => :post) %>
+        <% end %>
         </p>
       <% else %>
         <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>

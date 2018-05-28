@@ -3,5 +3,5 @@ When("I click on the Gyms button") do
 end
 
 Then("I should see the grades") do
-    expect(page).to have_css("th", :text => 'Nota')
+    expect(page).to have_css("th", :text => 'Avaliação')
 end

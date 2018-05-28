@@ -4,8 +4,7 @@ RSpec.feature "user logs in" do
   scenario "using google oauth2" do
     hash_gen_ominiauth
     visit home_path
-    expect(page).to have_link("Login com Google")
-    click_link "Login com Google"
+    click_on("Login com Google")
     expect(page).to have_content("Gabriel MacHamilton")
     expect(page).to have_link("Sair")
   end
