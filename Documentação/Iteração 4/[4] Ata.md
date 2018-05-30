@@ -19,7 +19,7 @@ Discord      | 29/05/2018
 Task         | Responsável
 ------------ | ------------- 
 Melhorias no front-end em geral | Gabriel
-Finalmente deploy do logo gabriel seu m | Gabriel
+Deploy do logo | Gabriel
 Front-end de busca e rotas das academias (g-maps, página de busca) | Gabriel
 Front-end de apresentação das academias (clicando no marker) | Gabriel
 Back-end de rotas do google-maps | Tiago
