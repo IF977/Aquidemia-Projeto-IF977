@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+  <style>
+  .button {
+    background-color: #f44336;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+  </style>
 <% if current_user  %>
   <div class="container">
         <div class="jumbotron">
@@ -22,7 +45,8 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h3 class="display-4"><%= link_to "Login necessário", "/auth/google" %></h3>
+        <h3>Login necessário!</h3></br>
+        <a href="/auth/google" class="button"><font color="black">Login com Google</font></a>
         <p class="lead"></p>
       </div>
 <% end %>

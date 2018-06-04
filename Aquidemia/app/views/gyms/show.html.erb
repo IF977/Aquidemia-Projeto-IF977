@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+  <style>
+  .button {
+    background-color: #f44336;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+  </style>
+<body>  
 <div class="container">
     <div class="jumbotron">  
       <p id="notice"><%= notice %></p>
@@ -60,23 +84,26 @@
         <% end %>
         <p>
         Avaliação:
-        <%= link_to('Like', vote_up_gym_path(@gym), :method => :post) %>
-        |
-        <%= link_to('Dislike', vote_down_gym_path(@gym), :method => :post) %>
-        |
-        <% if current_user.following?(@gym) %>
-          <%= link_to('Remova dos favoritos', remove_favorite_gym_path(@gym), :method => :post) %>
-        <% else %>
-          <%= link_to('Adicione aos favoritos', add_favorite_gym_path(@gym), :method => :post) %>
-        <% end %>
+        <div class="fundo">
+          <%= link_to('',vote_up_gym_path(@gym), :method => :post,class: "button_like button_like-sucess") %>
+          |
+          <%= link_to('',vote_down_gym_path(@gym), :method => :post,class: "button_dislike button_dislike-sucess") %>
+          |
+          <% if current_user.following?(@gym) %>
+            <%= link_to('Remova dos favoritos', remove_favorite_gym_path(@gym), :method => :post) %>
+          <% else %>
+            <%= link_to('Adicione aos favoritos', add_favorite_gym_path(@gym), :method => :post) %>
+          <% end %>
+          </div>
         </p>
       <% else %>
-        <p><%= link_to "Faça login para avaliar a academia", "/auth/google" %></p>
+        <a href="/auth/google" class="button"><font color="black">Faça login para avaliar acadmias</font></a>
       <% end %>
       
       <p>
-      <%= link_to 'Voltar', pages_gyms_path %>
+      <%= link_to "Voltar", pages_gyms_path, class: "button2 button2-sucess" %>  
       </p>
 </div>
 
 <p><div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+</body>
