@@ -85,9 +85,13 @@
         <p>
         Avaliação:
         <div class="fundo">
-          <%= link_to('',vote_up_gym_path(@gym), :method => :post,class: "button_like button_like-sucess") %>
+          <%= link_to vote_up_gym_path(@gym), :method => :post, class: "button_like" do %>
+            <i class="icon-like fa fa-thumbs-up"></i>
+          <% end %>
           |
-          <%= link_to('',vote_down_gym_path(@gym), :method => :post,class: "button_dislike button_dislike-sucess") %>
+          <%= link_to vote_down_gym_path(@gym), :method => :post, class: "button_dislike" do %>
+            <i class="icon-dislike fa fa-thumbs-down"></i>
+          <% end %>
           |
           <% if current_user.following?(@gym) %>
             <%= link_to('Remova dos favoritos', remove_favorite_gym_path(@gym), :method => :post) %>
