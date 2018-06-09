@@ -1,55 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <style>
-    #map {
-      width: 125%;
-      height: 600px;
-    }
+      #map {
+        width: 135%;
+        height: 800px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
     </style>
   </head>
   <body>
-    <div id="map">
+    <div id="floating-panel">
+      <b>Sua posição: </b>
+      <input id="address" type="textbox" value="Cidade, rua">
+      <input id="submit" type="button" value="Posicionar">
     </div>
+    <div id="map"></div>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-8.0538900, -34.8811100),
-          zoom: 12,
+          center: new google.maps.LatLng(-8.0624203, -34.9270747),
+          zoom: 14,
         });
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
+        var geocoder = new google.maps.Geocoder();
+        
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });   
+         
         "<% @gyms.each do |gym| %>"
+          var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '<h4 id="firstHeading" class="firstHeading"><%= gym.name %></h4>'+
+            '<div id="bodyContent">'+
+            '<%= link_to 'Detalhes', gym %>'+
+            '</div>';
           var marker = new google.maps.Marker({
             title: "<%= gym.name %>",
             position: new google.maps.LatLng("<%= gym.latitude %>", "<%= gym.longitude %>")
           });
+          attachListener(marker);
+          function attachListener(marker) {
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });            
+            marker.addListener('click', function() {
+              infowindow.open(marker.get('map'), marker);
+            });
+          }
           marker.setMap(map);
         "<% end %>"
-        
-        marker.addListener('click', function() {
-          map.setZoom(10);
-          map.setCenter(marker.getPosition());
-        });
       }
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var home = new google.maps.Marker({
+              title: 'Sua localização',
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+            home.setMap(map);
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      } 
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFL4I3GmmiTxOjSvAKZo2r_E1Pk6weDU&callback=initMap">
