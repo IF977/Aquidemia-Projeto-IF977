@@ -6,7 +6,7 @@
     <style>
       #map {
         width: 135%;
-        height: 800px;
+        height: 705px;
       }
       html, body {
         height: 100%;
@@ -31,27 +31,35 @@
   <body>
     <div id="floating-panel">
       <b>Sua posição: </b>
-      <input id="address" type="textbox" value="Cidade, rua">
+      <input id="address" type="textbox" value="Recife, marco zero">
       <input id="submit" type="button" value="Posicionar">
     </div>
     <div id="map"></div>
     <script>
       function initMap() {
+        directionsDisplay = new google.maps.DirectionsRenderer(
+        {
+        suppressMarkers: true
+        });
+        directionsService = new google.maps.DirectionsService();
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(-8.0624203, -34.9270747),
           zoom: 14,
         });
+        directionsDisplay.setMap(map);
         var geocoder = new google.maps.Geocoder();
         
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });   
-         
+          start = new google.maps.LatLng(-8.0621058, -34.8710205);
         "<% @gyms.each do |gym| %>"
           var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '<h4 id="firstHeading" class="firstHeading"><%= gym.name %></h4>'+
             '<div id="bodyContent">'+
+            '<button type="button" class="custom_button" onclick="return calcRoute();">Traçar caminho</button>' +
+            '&nbsp' + '&nbsp' +
             '<%= link_to 'Detalhes', gym %>'+
             '</div>';
           var marker = new google.maps.Marker({
@@ -65,6 +73,9 @@
             });            
             marker.addListener('click', function() {
               infowindow.open(marker.get('map'), marker);
+              latmarker = marker.getPosition().lat();
+              lngmarker = marker.getPosition().lng();
+              end = new google.maps.LatLng(latmarker, lngmarker);
             });
           }
           marker.setMap(map);
@@ -74,18 +85,36 @@
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
+            start = results[0].geometry.location
             resultsMap.setCenter(results[0].geometry.location);
-            var home = new google.maps.Marker({
+            var marker = new google.maps.Marker({
               title: 'Sua localização',
               map: resultsMap,
               position: results[0].geometry.location
             });
-            home.setMap(map);
+            marker.setMap(map);
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }
         });
       } 
+      function calcRoute() {
+         var request = {
+            origin: start,
+            destination: end,
+            travelMode: 'DRIVING'
+          };
+          directionsService.route(request, function(result, status) {
+           if (status == 'OK') {
+             directionsDisplay.setDirections(result);
+           }
+         });
+       }
+      document.getElementById('get').onclick = function(){
+        calcRoute()
+      };
+      
+    </script>
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFL4I3GmmiTxOjSvAKZo2r_E1Pk6weDU&callback=initMap">
