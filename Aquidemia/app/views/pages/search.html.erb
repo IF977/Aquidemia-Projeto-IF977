@@ -81,6 +81,7 @@
             '</div>';
           var marker = new google.maps.Marker({
             title: "<%= gym.name %>",
+            optimized: false,
             position: new google.maps.LatLng("<%= gym.latitude %>", "<%= gym.longitude %>")
           });
           attachListener(marker);
@@ -108,6 +109,7 @@
             lastMarker = new google.maps.Marker({
               title: 'Sua localização',
               map: resultsMap,
+              optimized: false,
               position: results[0].geometry.location,
               icon: pinSymbol("#FF1"),
             });
