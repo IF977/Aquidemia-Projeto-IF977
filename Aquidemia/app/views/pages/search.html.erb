@@ -6,7 +6,7 @@
     <style>
       #map {
         width: 135%;
-        height: 705px;
+        height: 700px;
       }
       html, body {
         height: 100%;
@@ -16,7 +16,7 @@
       #floating-panel {
         position: absolute;
         top: 10px;
-        left: 25%;
+        left: 15%;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -30,37 +30,54 @@
   </head>
   <body>
     <div id="floating-panel">
-      <b>Sua posição: </b>
-      <input id="address" type="textbox" value="Recife, marco zero">
+      <b>Digite seu endereço e selecione seu modo de viagem: </b>
+      <br></br>
+      <t>Seu endereço: </t>
+      <input id="address" type="textbox" value="Recife, Marco Zero">
       <input id="submit" type="button" value="Posicionar">
+      <br></br>
+      <t>Modo de viagem: </t>
+      <select id="mode">
+        <option value="DRIVING">Dirigindo</option>
+        <option value="WALKING">Andando</option>
+        <option value="BICYCLING">Bicicleta</option>
+        <option value="TRANSIT">Trânsito</option>
+      </select>
     </div>
     <div id="map"></div>
     <script>
+      var lastMarker = "0";
       function initMap() {
-        directionsDisplay = new google.maps.DirectionsRenderer(
-        {
-        suppressMarkers: true
+        directionsDisplay = new google.maps.DirectionsRenderer({
+          suppressMarkers: true
         });
         directionsService = new google.maps.DirectionsService();
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-8.0624203, -34.9270747),
+          center: new google.maps.LatLng(-8.0621058, -34.8710205),
           zoom: 14,
         });
         directionsDisplay.setMap(map);
         var geocoder = new google.maps.Geocoder();
-        
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });   
-          start = new google.maps.LatLng(-8.0621058, -34.8710205);
+        start = new google.maps.LatLng(-8.0621058, -34.8710205);
+        lastMarker = new google.maps.Marker({
+          title: "Posição padrão",
+          position: start,
+          icon: pinSymbol("#FF1"),
+        });
+        lastMarker.setMap(map)
         "<% @gyms.each do |gym| %>"
           var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '<h4 id="firstHeading" class="firstHeading"><%= gym.name %></h4>'+
             '<div id="bodyContent">'+
-            '<button type="button" class="custom_button" onclick="return calcRoute();">Traçar caminho</button>' +
-            '&nbsp' + '&nbsp' +
+            '<t>Clique em detalhes para mais informações: </t>'+
             '<%= link_to 'Detalhes', gym %>'+
+            '</div>'+
+            '<t>Se você já inseriu seu endereço descubra a rota: </t>'+
+            '<button type="button" class="custom_button" onclick="return calcRoute();">Mostrar rota</button>'+
             '</div>';
           var marker = new google.maps.Marker({
             title: "<%= gym.name %>",
@@ -82,39 +99,46 @@
         "<% end %>"
       }
       function geocodeAddress(geocoder, resultsMap) {
+        lastMarker.setMap(null);
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
             start = results[0].geometry.location
             resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
+            lastMarker = new google.maps.Marker({
               title: 'Sua localização',
               map: resultsMap,
-              position: results[0].geometry.location
+              position: results[0].geometry.location,
+              icon: pinSymbol("#FF1"),
             });
-            marker.setMap(map);
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }
         });
       } 
+      function pinSymbol(color) {
+        return {
+          path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+          fillColor: color,
+          fillOpacity: 1,
+          strokeColor: '#000',
+          strokeWeight: 2,
+          scale: 1.5,
+        };
+      }  
       function calcRoute() {
-         var request = {
-            origin: start,
-            destination: end,
-            travelMode: 'DRIVING'
-          };
-          directionsService.route(request, function(result, status) {
-           if (status == 'OK') {
-             directionsDisplay.setDirections(result);
-           }
-         });
+        var selectedMode = document.getElementById('mode').value;
+        var request = {
+          origin: start,
+          destination: end,
+          travelMode: google.maps.TravelMode[selectedMode]
+        };
+        directionsService.route(request, function(result, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(result);
+        }
+        });
        }
-      document.getElementById('get').onclick = function(){
-        calcRoute()
-      };
-      
-    </script>
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFL4I3GmmiTxOjSvAKZo2r_E1Pk6weDU&callback=initMap">
