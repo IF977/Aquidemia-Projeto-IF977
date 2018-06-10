@@ -34,8 +34,8 @@ Para que outros usuários vejam a infraestrutura
 ```
 6ª HU
 Como um usuário do Aquidemia
-Quero escolher rotas alternativas
-Para ter mais opções de caminhos
+Quero descobrir uma rota no mapa
+Para saber chegar na academia
 ```
 ```
 7ª HU
