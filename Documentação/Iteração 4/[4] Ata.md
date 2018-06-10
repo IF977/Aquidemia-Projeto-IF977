@@ -11,6 +11,9 @@ Programa     | Data
 ------------ | -------------
 Discord      | 29/05/2018
 
+### Observação
+* A ata foi atualizada em 09/06/2018 com update das tarefas da HU 6
+
 ### Objetivos
 * Definir tarefas necessárias para a completude do projeto com base na visão da equipe
 * Definir responsáveis pelas tarefas
@@ -21,10 +24,11 @@ Task         | Responsável
 Melhorias no front-end em geral | Gabriel
 Deploy do logo | Gabriel
 Front-end de busca e rotas das academias (g-maps, página de busca) | Gabriel
-Front-end de apresentação das academias (clicando no marker) | Gabriel
-Back-end de rotas do google-maps | Tiago
-Back-end de localização das academias | Thomas
+Implementação de rotas do google-maps | Tiago
+Implementação de localização das academias no google-maps | Thomas
 Criação de testes relacionados às tarefas | Antonio
+Screencast | Tiago
+Update do Heroku com as atualizações finais | Antonio
 
 ### HU's a serem implementadas
 ```
@@ -36,6 +40,6 @@ Para melhorar minha saúde, sem ter que me locomover muito.
 ```
 6ª HU
 Como um usuário do Aquidemia
-Quero escolher rotas alternativas
-Para ter mais opções de caminhos
+Quero descobrir uma rota no mapa
+Para saber chegar na academia
 ```
