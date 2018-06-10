@@ -2,7 +2,7 @@
 
 Projeto da disciplina IF977 - Engenharia de Software, do curso de Sistemas de Informação - CIN (UFPE)
 
-Link do app no heroku: siaquidemia.herokuapp.com
+Link do app no heroku: http://siaquidemia.herokuapp.com/
 
 ## Equipe:
 * Thomás Torreão de Brito Bastos (Gerente de Projeto e Desenvolvedor back-end)
