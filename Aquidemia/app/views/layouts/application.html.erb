@@ -26,15 +26,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img class="logo" src="https://media.discordapp.net/attachments/324326180415340545/455543589305319424/wtfisthisshit_-_Copia.png">
+        <%= image_tag("navbar-logo.png", :alt => "navbar-logo feed", :class => "navbar-logo") %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Home', home_path=%></li>
-            <li><%= link_to 'Busca', pages_search_path=%></li>
+            <li><%= link_to 'Buscar', pages_search_path=%></li>
+            <li><%= link_to 'Academias', pages_gyms_path=%></li>
             <li><%= link_to 'Favoritos', pages_favorites_path=%></li>
             <li><%= link_to 'Sobre', pages_about_path=%></li>
-            <li><%= link_to 'Academias', pages_gyms_path=%></li>
-            <li><a href=https://github.com/gmachamilton/Aquidemia-Projeto-IF977>Github link</a></li>
           </ul>
         </div>
       </div>

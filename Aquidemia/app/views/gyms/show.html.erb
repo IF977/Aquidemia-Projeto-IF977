@@ -23,7 +23,7 @@
   </style>
 <body>  
 <div class="container">
-    <div class="jumbotron">  
+    <div style="text-align:justify" class="jumbotron">  
       <p id="notice"><%= notice %></p>
        <p>
         <strong>Nome:</strong>
@@ -84,7 +84,7 @@
         <% end %>
         <p>
         Avaliação:
-        <div class="fundo">
+        <div style="text-align:center" class="fundo">
           <%= link_to vote_up_gym_path(@gym), :method => :post, class: "button_like" do %>
             <i class="icon-like fa fa-thumbs-up"></i>
           <% end %>
@@ -101,11 +101,11 @@
           </div>
         </p>
       <% else %>
-        <a href="/auth/google" class="button"><font color="black">Faça login para avaliar acadmias</font></a>
+        <a href="/auth/google" class="button"><font color="black">Faça login para avaliar academias</font></a>
       <% end %>
       
-      <p>
-      <%= link_to "Voltar", pages_gyms_path, class: "button2 button2-sucess" %>  
+      <p style="text-align:center">
+      <%= link_to "Academias", pages_gyms_path, class: "button2 button2-sucess" %>  
       </p>
 </div>
 

@@ -1,55 +1,137 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <style>
-    #map {
-      width: 125%;
-      height: 600px;
-    }
+      #map {
+        width: 100%;
+        height: 600px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #000;
+      }
     </style>
   </head>
   <body>
-    <div id="map">
+    <div class="container">
+      <div class="jumbotron">
+        <p class="lead">
+        <t style="color:#fff; float:justify" >Digite seu endereço, selecione seu modo de viagem e começe a navegar.</t>
+        </p>
+        <hr class="my-4">
+        <font color="#fff">Seu endereço: </font>
+        <input id="address" type="textbox" value="Recife, Marco Zero">
+        <input id="submit" type="button" value="Posicionar">
+        <br></br>
+        <font color="#fff">Modo de viagem: </font>
+        <select id="mode">
+          <option value="DRIVING">Dirigindo</option>
+          <option value="WALKING">Andando</option>
+          <option value="BICYCLING">Bicicleta</option>
+          <option value="TRANSIT">Trânsito</option>
+        </select>
     </div>
+    <div id="map"></div>
     <script>
+      var lastMarker;
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-8.0538900, -34.8811100),
-          zoom: 12,
+        directionsDisplay = new google.maps.DirectionsRenderer({
+          suppressMarkers: true
         });
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
+        directionsService = new google.maps.DirectionsService();
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(-8.0621058, -34.8710205),
+          zoom: 14,
+        });
+        directionsDisplay.setMap(map);
+        var geocoder = new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });   
+        start = new google.maps.LatLng(-8.0621058, -34.8710205);
+        lastMarker = new google.maps.Marker({
+          title: "Posição padrão",
+          position: start,
+          icon: pinSymbol("#FF1"),
+        });
+        lastMarker.setMap(map)
         "<% @gyms.each do |gym| %>"
+          var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '<h4 id="firstHeading" class="firstHeading"><%= gym.name %></h4>'+
+            '<div id="bodyContent">'+
+            '<t>Clique em detalhes para mais informações: </t>'+
+            '<%= link_to 'Detalhes', gym, :target => "_blank"%>'+
+            '</div>'+
+            '<t>Se você já inseriu seu endereço descubra a rota: </t>'+
+            '<button type="button" class="custom_button" onclick="return calcRoute();">Mostrar rota</button>'+
+            '</div>';
           var marker = new google.maps.Marker({
             title: "<%= gym.name %>",
+            optimized: false,
             position: new google.maps.LatLng("<%= gym.latitude %>", "<%= gym.longitude %>")
           });
+          attachListener(marker);
+          function attachListener(marker) {
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString,
+            });            
+            marker.addListener('click', function() {
+              infowindow.open(marker.get('map'), marker);
+              latmarker = marker.getPosition().lat();
+              lngmarker = marker.getPosition().lng();
+              end = new google.maps.LatLng(latmarker, lngmarker);
+            });
+          }
           marker.setMap(map);
         "<% end %>"
-        
-        marker.addListener('click', function() {
-          map.setZoom(10);
-          map.setCenter(marker.getPosition());
-        });
       }
+      function geocodeAddress(geocoder, resultsMap) {
+        lastMarker.setMap(null);
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            start = results[0].geometry.location
+            resultsMap.setCenter(results[0].geometry.location);
+            lastMarker = new google.maps.Marker({
+              title: 'Sua localização',
+              map: resultsMap,
+              optimized: false,
+              position: results[0].geometry.location,
+              icon: pinSymbol("#FF1"),
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      } 
+      function pinSymbol(color) {
+        return {
+          path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+          fillColor: color,
+          fillOpacity: 1,
+          strokeColor: '#000',
+          strokeWeight: 2,
+          scale: 1.5,
+        };
+      }  
+      function calcRoute() {
+        var selectedMode = document.getElementById('mode').value;
+        var request = {
+          origin: start,
+          destination: end,
+          travelMode: google.maps.TravelMode[selectedMode]
+        };
+        directionsService.route(request, function(result, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(result);
+        }
+        });
+       }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEFL4I3GmmiTxOjSvAKZo2r_E1Pk6weDU&callback=initMap">

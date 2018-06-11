@@ -51,12 +51,11 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        
-        <h1 class="display-4">Aquidemia</h1>
-        <p class="lead">Encontre academias da cidade mais próximas!</p>
+        <%= image_tag("home-logo.png", :alt => "home-logo feed", :class => "home-logo") %>
+        <h2 style="text-align:center" class="display-4">Descubra as Academias da Cidade próximas de você!</h2>
         <hr class="my-4">
         <p></p>
-        <p class="lead">
+        <p style="text-align:center" class="lead">
          <% if current_user  %>
            <h3>Bem vindo, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
            <%= link_to "Sair", logout_path, class: "button2 button2-sucess" %>
