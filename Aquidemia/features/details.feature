@@ -4,7 +4,8 @@ Feature: Página de detalhes
    To have more information about it
    
 Scenario: Usuário não está logado
-   Given I am on the gyms page
+   Given I am not logged in
+   And I am on the gyms page
    When I click on the details button
    Then I should see the details and the login link
    

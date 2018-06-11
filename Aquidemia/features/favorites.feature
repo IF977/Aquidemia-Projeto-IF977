@@ -11,4 +11,5 @@ Scenario: Visualizar favoritos
 Scenario: Usuário precisa de login
    Given I am on the home page
    When I click on the favorites button
+   And I am not logged in
    Then I should see the log in link

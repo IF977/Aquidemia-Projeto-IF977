@@ -4,6 +4,6 @@ Feature: Link para o Github
    To give it a star
 
 Scenario: Acessar Github
-   Given I am on the home page
+   Given I am on the about page
    When I click on the Github link button
    Then I should see the Github page

@@ -8,7 +8,7 @@ end
 
 Then("I should see the details and the login link") do
   expect(page).to have_content('Nome')
-  expect(page).to have_link('Faça login para avaliar a academia')
+  expect(page).to have_content('Faça login')
 end
 
 Given("I am logged in") do
@@ -34,6 +34,6 @@ end
 
 Then("I should see the details and the rating options") do
   expect(page).to have_link('Adicione aos favoritos') or expect(page).to have_link('Remova dos favoritos') 
-  expect(page).to have_link('Like')
-  expect(page).to have_link('Dislike') 
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[1]")
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[2]")
 end

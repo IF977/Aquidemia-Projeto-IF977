@@ -1,5 +1,5 @@
 When("I click on the like button") do 
-  click_link('Like')
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[1]").click
 end
 
 Then("I should see the positive vote confirmation") do
@@ -7,7 +7,7 @@ Then("I should see the positive vote confirmation") do
 end
 
 When("I click on the dislike button") do
-  click_link('Dislike')
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[2]").click
 end
 
 Then("I should see the negative vote confirmation") do
@@ -16,7 +16,7 @@ end
 
 Given("I have already liked the gym") do
   visit('/gyms/1')
-  click_link('Like')
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[1]").click
 end
 
 Then("I should not see the positive vote confirmation") do
@@ -25,7 +25,7 @@ end
 
 Given("I have already disliked the gym") do
   visit('/gyms/1')
-  click_link('Dislike')
+  find(:xpath, "/html/body/div[2]/div/div/div/div[1]/div/a[2]").click
 end
 
 Then("I should not see the negative vote confirmation") do
