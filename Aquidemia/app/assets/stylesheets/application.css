@@ -16,7 +16,7 @@
 body {
     margin: 0px !important;
     height: 100%;
-    background-image: url("https://media.discordapp.net/attachments/423272905783377933/445727684551507978/Design_sem_nome.png?width=325&height=325");
+    background-image: url("https://media.discordapp.net/attachments/324326180415340545/455537843247513610/background.png?width=481&height=473");
     background-size: 100%;
     background-color: #fff;
     color: #fff;
@@ -30,7 +30,7 @@ th, td {
     padding: 15px;
     text-align: left;
 }
-table#t01 {
+table {
     width: 100%;    
     background-color: #f1f1c1;
 }
@@ -51,4 +51,10 @@ tbody {
     float: None;
     list-style: none;
     padding: 0;
+}
+
+/*LOGO*/
+.logo {
+    display: inline-block;
+    float:left;
 }
