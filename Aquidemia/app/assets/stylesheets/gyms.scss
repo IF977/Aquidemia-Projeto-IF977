@@ -1,3 +1,63 @@
 // Place all the styles related to the Gyms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+.fundo {
+  background-color: #1D1F20;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-like {
+  color: green;
+  font-size: 20px;
+}
+
+.icon-dislike {
+  color: red;
+  font-size: 20px;
+}
+
+.button_like:hover .icon-like {
+    color: #1D1F20;
+}
+
+.button_dislike:hover .icon-dislike {
+    color: #1D1F20;
+}
+
+.button_like:hover {
+    background-color: green;
+    color: #1D1F20;
+}
+
+.button_dislike:hover {
+    background-color: red;
+    color: #1D1F20;
+}
+
+.button_like {
+    border-radius: 50px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 10px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+
+  .button_dislike {
+    border-radius: 50px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }

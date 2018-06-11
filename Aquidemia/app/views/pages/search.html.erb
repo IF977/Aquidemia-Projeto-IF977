@@ -5,48 +5,39 @@
     <meta charset="utf-8">
     <style>
       #map {
-        width: 135%;
-        height: 700px;
+        width: 100%;
+        height: 600px;
       }
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 15%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
+        color: #000;
       }
     </style>
   </head>
   <body>
-    <div id="floating-panel">
-      <b>Digite seu endereço e selecione seu modo de viagem: </b>
-      <br></br>
-      <t>Seu endereço: </t>
-      <input id="address" type="textbox" value="Recife, Marco Zero">
-      <input id="submit" type="button" value="Posicionar">
-      <br></br>
-      <t>Modo de viagem: </t>
-      <select id="mode">
-        <option value="DRIVING">Dirigindo</option>
-        <option value="WALKING">Andando</option>
-        <option value="BICYCLING">Bicicleta</option>
-        <option value="TRANSIT">Trânsito</option>
-      </select>
+    <div class="container">
+      <div class="jumbotron">
+        <p class="lead">
+        <t style="color:#fff; float:justify" >Digite seu endereço, selecione seu modo de viagem e começe a navegar.</t>
+        </p>
+        <hr class="my-4">
+        <font color="#fff">Seu endereço: </font>
+        <input id="address" type="textbox" value="Recife, Marco Zero">
+        <input id="submit" type="button" value="Posicionar">
+        <br></br>
+        <font color="#fff">Modo de viagem: </font>
+        <select id="mode">
+          <option value="DRIVING">Dirigindo</option>
+          <option value="WALKING">Andando</option>
+          <option value="BICYCLING">Bicicleta</option>
+          <option value="TRANSIT">Trânsito</option>
+        </select>
     </div>
     <div id="map"></div>
     <script>
-      var lastMarker = "0";
+      var lastMarker;
       function initMap() {
         directionsDisplay = new google.maps.DirectionsRenderer({
           suppressMarkers: true
@@ -74,13 +65,14 @@
             '<h4 id="firstHeading" class="firstHeading"><%= gym.name %></h4>'+
             '<div id="bodyContent">'+
             '<t>Clique em detalhes para mais informações: </t>'+
-            '<%= link_to 'Detalhes', gym %>'+
+            '<%= link_to 'Detalhes', gym, :target => "_blank"%>'+
             '</div>'+
             '<t>Se você já inseriu seu endereço descubra a rota: </t>'+
             '<button type="button" class="custom_button" onclick="return calcRoute();">Mostrar rota</button>'+
             '</div>';
           var marker = new google.maps.Marker({
             title: "<%= gym.name %>",
+            optimized: false,
             position: new google.maps.LatLng("<%= gym.latitude %>", "<%= gym.longitude %>")
           });
           attachListener(marker);
@@ -108,6 +100,7 @@
             lastMarker = new google.maps.Marker({
               title: 'Sua localização',
               map: resultsMap,
+              optimized: false,
               position: results[0].geometry.location,
               icon: pinSymbol("#FF1"),
             });
