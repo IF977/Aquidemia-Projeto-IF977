@@ -4,6 +4,8 @@ Projeto da disciplina IF977 - Engenharia de Software, do curso de Sistemas de In
 
 Link do app no heroku: http://siaquidemia.herokuapp.com/
 
+Screencast: https://drive.google.com/file/d/1cYMTwAiGEig8-MhVmWUa4q1Opbdm8h16/view
+
 ## Equipe:
 * Thomás Torreão de Brito Bastos (Gerente de Projeto e Desenvolvedor back-end)
 * Antônio Rodrigues da Mata Neto (Desenvolvedor back-end)
